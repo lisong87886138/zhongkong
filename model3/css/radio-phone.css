@@ -1,0 +1,275 @@
+.radioBox {
+  border-radius: 10px 10px 0 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.radioBox .width50 {
+  width: 50%;
+}
+.radioBox .boxTop {
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+}
+.radioBox .boxTop .colorEEE {
+  color: #eee;
+  padding: 5px 0;
+}
+.radioBox .boxTop .boxTopTwo {
+  padding: 5px 0;
+  font-size: 0.2rem;
+}
+.radioBox .boxTop .boxTopTwo .iconfont {
+  font-size: 0.2rem;
+}
+.radioBox .boxTop .boxTopThree .iconfont {
+  font-size: 0.2rem;
+}
+.radioBox .boxMiddle {
+  background: #eee;
+  height: 68%;
+  margin-bottom: 15px;
+}
+.radioBox .boxMiddle div {
+  padding: 20px 40px;
+}
+.radioBox .boxMiddleBig {
+  height: 75%;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.radioBox .boxMiddleBig .active {
+  background: #eee;
+}
+.radioBox .boxMiddleBig .boxMiddleBigLeft {
+  width: 20%;
+  font-size: 0.2rem;
+}
+.radioBox .boxMiddleBig .boxMiddleBigLeft div {
+  padding: 10px 0 10px 20px;
+}
+.radioBox .boxMiddleBig .boxMiddleBigRight {
+  width: 80%;
+  background: #eee;
+}
+.radioBox .boxMiddleBig .boxMiddleBigRight .btn {
+  width: 25%;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  background: #D6D1D1;
+  color: #eee;
+  font-size: 0.2rem;
+}
+.radioBox .boxMiddleBig .boxMiddleBigRightBox2 {
+  margin-top: 15%;
+  font-size: 0.3rem;
+}
+.radioBox .boxMiddleBig .boxMiddleBigRightBox2 .iconfont {
+  font-size: 0.3rem;
+}
+.radioBox .boxMiddleBig2 {
+  height: 77%;
+  margin-bottom: 15px;
+  padding: 20px;
+  width: 100%;
+}
+.radioBox .boxMiddleBig2 .boxMiddleBig2Box {
+  width: 26%;
+  background: #D6D1D1;
+  border-radius: 10px;
+  margin: 24% auto 0;
+  padding: 10px 30px;
+}
+.radioBox .boxMiddleBig2 .boxMiddleBig2Box div {
+  margin: 10px 0;
+}
+.radioBox .boxBottom {
+  text-align: center;
+}
+.radioBox .boxBottom .iconfont {
+  font-size: 0.3rem;
+}
+.radioBox .ovlayer {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  width: 90%;
+  height: 88%;
+  background: #FBFBFB;
+  border-radius: 10px;
+  padding: 20px;
+}
+.radioBox .ovlayer .ovlayerBox {
+  border: 1px solid #CACACA;
+  border-radius: 10px;
+  height: 94%;
+  margin-top: 14px;
+}
+.radioBox .ovlayer .ovlayerBoxLeft {
+  width: 30%;
+  border-right: 1px solid #CACACA;
+}
+.radioBox .ovlayer .ovlayerBoxLeft .ovlayerName {
+  padding: 20px;
+  border-bottom: 1px solid #CACACA;
+}
+.radioBox .ovlayer .ovlayerBoxLeft .ovlayerName:nth-child(1) {
+  border-radius: 10px 0 0 0;
+}
+.radioBox .ovlayer .ovlayerBoxLeft .active {
+  background: #EDEDED;
+}
+.radioBox .ovlayer .ovlayerBoxRight {
+  padding: 30px;
+  width: 70%;
+}
+.radioBox .ovlayer .ovlayerBoxRight .btnSearch {
+  border: 1px solid #CACACA;
+  border-radius: 6px;
+  width: 26%;
+  text-align: center;
+  padding: 10px 20px;
+  background: #fff;
+  margin: 100% auto 0;
+}
+.radioBox .ovlayer .ovlayerBoxRight .phoneInformation {
+  border: 1px solid #CACACA;
+  padding: 15px 10px;
+  margin: 10px 0;
+}
+.radioBox .ovlayer .ovlayerBoxRight .btnBox {
+  margin-top: 80%;
+}
+.radioBox .ovlayer .ovlayerBoxRight .delectThis {
+  border: 1px solid #CACACA;
+  padding: 15px 10px;
+  width: 40%;
+  text-align: center;
+}
+.radioBox .ovlayer .ovlayerBoxRight .connectThis {
+  background: #5B91F5 ;
+  padding: 15px 10px;
+  width: 40%;
+  text-align: center;
+}
+.radioBox .bluetoothOvlayer {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  width: 90%;
+  height: 88%;
+  background: #FBFBFB;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 0.15rem;
+}
+.radioBox .bluetoothOvlayer p {
+  font-size: 0.15rem;
+}
+.radioBox .bluetoothOvlayerBox {
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  height: 94%;
+  overflow: hidden;
+}
+.radioBox .voiceSetting {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  width: 90%;
+  height: 62%;
+  background: #FBFBFB;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+.radioBox .voiceSetting .voiceSettingTitle {
+  padding-left: 20px;
+}
+.radioBox .voiceSettingBox {
+  height: 97%;
+  width: 100%;
+  margin-top: 15px;
+}
+.radioBox .voiceSettingLeft {
+  width: 30%;
+  background: #fff;
+}
+.radioBox .voiceSettingLeft div {
+  padding: 10px 0 10px 20px;
+}
+.radioBox .voiceSettingLeft .active {
+  background: #eee;
+}
+.radioBox .voiceSettingRight {
+  width: 70%;
+  overflow: hidden;
+}
+.radioBox .voiceSettingRight .rangeBox {
+  margin: 18% 0 36%;
+}
+.radioBox .voiceSettingRight .rangeBox input[type=range] {
+  position: relative;
+  width: 200%;
+  height: 2px;
+  margin: 17px 0;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  background-color: #999;
+  -webkit-appearance: none!important;
+}
+.radioBox .voiceSettingRight .rangeBox input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox2 img {
+  width: 100%;
+  margin-top: -71%;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3 {
+  padding: 20px;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3 .line {
+  border-top: 1px solid #CACACA;
+  margin: 20px 0;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3 .mui-switch {
+  margin-right: 20px;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3Btn {
+  position: relative;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3Btn ul {
+  width: 50%;
+  background: #d4d4d4;
+  border-radius: 20px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 0;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3Btn li {
+  width: 33.33%;
+  z-index: 1;
+}
+.radioBox .voiceSettingRight .voiceSettingRightBox3Btn .active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px #888888;
+  width: 16.5%;
+  height: 100%;
+}

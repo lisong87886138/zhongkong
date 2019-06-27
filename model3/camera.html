@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<!-- <link rel="stylesheet" href="font/iconfont.css"> -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/camera.css" />
+
+	<script src="../_js/mui.min.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<title></title>
+</head>
+
+<body>
+	<div class="camera">
+		<div>
+			<span class="iconfont icon-guanbi"></span>
+		</div>
+		<div>
+			<video id="video" ref="video"></video>
+			<canvas id="canvas" ref="canvas"></canvas>
+		</div>
+	</div>
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+
+		var aVideo=document.getElementById('video');
+		var aCanvas=document.getElementById('canvas');
+		var ctx=aCanvas.getContext('2d');
+			 
+		var con = {
+			video:true,
+			audio:false
+		}
+		var prom = navigator.mediaDevices.getUserMedia(con)
+		prom.then(function(MediaStream){
+			video.srcObject = MediaStream
+			video.play()
+		})
+
+
+		//关闭当前页面
+		mui('.camera').on('tap','.icon-guanbi',function(){
+			// video.pause()
+			dq('.camera').classList.add('dn')
+		})
+	</script>
+</body>
+
+</html>

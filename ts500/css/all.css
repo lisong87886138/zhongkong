@@ -1,0 +1,287 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.iconfont {
+  color: #fff;
+  font-size: 0.2rem;
+}
+.disFlexRow {
+  display: flex;
+  flex-direction: row;
+}
+.disFlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.disWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.justifyContentSpArod {
+  justify-content: space-around;
+}
+.justifyContentSpBet {
+  justify-content: space-between;
+}
+.marginAuto0 {
+  margin: auto 0;
+}
+.textCenter {
+  text-align: center;
+}
+.dn {
+  display: none;
+}
+.db {
+  display: block;
+}
+.centerCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.leftBox {
+  width: 4%;
+}
+.leftBox .iconfont {
+  margin: 15px 0;
+}
+.centerBox {
+  width: 92%;
+}
+.rightBox {
+  width: 4%;
+}
+.rightBox .iconfont {
+  margin: 15px 0;
+}
+.indexBox {
+  width: 100%;
+  height: 100%;
+}
+.indexBox .leftCenter {
+  width: 65%;
+}
+.indexBox .leftCenter .content {
+  width: 100%;
+  height: auto;
+}
+.indexBox .leftCenter .contentBox {
+  width: 100%;
+  height: 97%;
+  padding: 20px;
+}
+.indexBox .leftCenter .text1 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.indexBox .leftCenter .title {
+  font-size: 0.5rem;
+  color: #2fa4b8;
+  margin-bottom: 40px;
+  line-height: 1rem;
+}
+.indexBox .leftCenter .fmFoot {
+  background: #131e3a;
+  padding: 20px 0;
+}
+.indexBox .leftCenter .fmRadio {
+  margin: 40px 0;
+}
+.indexBox .leftCenter .line {
+  border-top: 1px solid #fff;
+}
+.indexBox .leftCenter .lineNow {
+  background: #2fa4b8;
+  width: 2px;
+  z-index: 1;
+}
+.indexBox .leftCenter .radioSelect {
+  height: 80px;
+  margin-top: -12px;
+}
+.indexBox .leftCenter .langLine {
+  height: 20px;
+  width: 2px;
+  background: #eee;
+}
+.indexBox .leftCenter .smallLine {
+  height: 8px;
+  width: 2px;
+  background: #eee;
+}
+.indexBox .leftCenter .lineBox {
+  align-items: flex-end;
+  margin-top: -20px;
+}
+.indexBox .leftCenter .daosanjiao {
+  border-top: 10px solid #2fa4b8;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.indexBox .leftCenter .zhengsanjiao {
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #2fa4b8;
+  border-left: 10px solid transparent;
+}
+.indexBox .leftCenter .fmText {
+  color: #2fa4b8;
+  font-size: 0.25rem;
+  margin: 20px 0;
+}
+.indexBox .leftCenter .phone {
+  padding: 50px;
+  border-radius: 10px;
+  background: #404a5f;
+  margin-bottom: 10px;
+}
+.indexBox .leftCenter .set {
+  padding: 9px 30px;
+  background: #404a5f;
+  margin-top: 40px;
+}
+.indexBox .leftCenter .map {
+  width: 100%;
+  height: 100%;
+}
+.indexBox .leftCenter .airBtn span {
+  padding: 0 10px;
+}
+.indexBox .leftCenter .fengshan {
+  margin: 30px 0;
+}
+.indexBox .leftCenter .fengshan span {
+  margin: 0px 50px;
+}
+.indexBox .leftCenter .icon-zuoyi {
+  font-size: 0.3rem;
+  padding: 40px 10px;
+  background: #8fa2ba;
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 58%;
+}
+.indexBox .leftCenter .icon-zuoyi:nth-child(1) {
+  transform: rotateZ(10deg);
+  display: inline-block;
+}
+.indexBox .leftCenter .icon-zuoyi:nth-child(2) {
+  transform: rotateZ(0deg);
+  display: inline-block;
+  margin-left: -12px;
+}
+.indexBox .leftCenter .icon-zuoyi:nth-child(3) {
+  transform: rotateZ(-10deg);
+  display: inline-block;
+}
+.indexBox .leftCenter .zuoyi {
+  justify-content: center;
+  align-items: center;
+}
+.indexBox .leftCenter .zuoyiImg {
+  margin: 0 40px;
+}
+.indexBox .rightCenter {
+  width: 35%;
+}
+.indexBox .rightCenter .divBox {
+  text-align: center;
+  width: 100%;
+  height: 23%;
+  margin: 10px 0;
+  background: #171f36;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.indexBox .rightCenter .divBox div {
+  margin: 20px 0;
+}
+.indexBox .rightCenter .active {
+  background: #2fa4b8;
+}
+.indexBox .rightCenter .bigText {
+  font-weight: 600;
+}
+.resveBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.resveBox #video {
+  width: 100%;
+  height: 100%;
+}
+.resveBox #canvas {
+  display: none;
+}
+.resveBox .leftCenter {
+  width: 70%;
+  position: relative;
+}
+.resveBox .rightCenter {
+  width: 30%;
+}
+.resveBox .text {
+  position: absolute;
+  left: 0;
+  bottom: 10.8%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.settingBox {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.settingBox .width33 {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #131e3a;
+  margin: 5px;
+}
+.settingBox .iconfont {
+  font-size: 0.2rem;
+  margin: 10px 0;
+}
+.settingViewBox .title {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-bottom: 0.5px solid #eee;
+}
+.settingViewBox .selectBox {
+  width: 10%;
+}
+.settingViewBox .selectBox div {
+  padding: 10px ;
+  border-left: 10px solid #eee;
+  margin: 20px 0;
+}
+.settingViewBox .selectBox .active {
+  border-left: 10px solid #2fa4b8;
+}
+.settingViewBox .mainBox {
+  width: 90%;
+}
+.settingViewBox .mainBox .list {
+  border-bottom: 0.5px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<title></title>
+	
+	<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+	<link rel="stylesheet" href="https://cache.amap.com/lbs/static/main.css"/>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+
+	<style>
+		body {
+            font-size: 12px;
+        }
+        #tip {
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0px silver;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        #tip input[type="text"] {
+            height: 25px;
+            border: 0;
+            padding-left: 5px;
+            width: 280px;
+            border-radius: 3px;
+            outline: none;
+        }
+		.info{
+			left: 6rem;
+			width: 30rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div id='container'></div>
+	<div class="info">
+		<div class="input-item">
+			<div class="input-item-prepend">
+			</div>
+			<input id='tipinput' type="text" onchange="inputChange()">
+		</div>
+	</div>
+	<!-- <div id="tip">
+		<input type="text" id="keyword" name="keyword" value="请输入关键字：(选定后搜索)" onfocus='this.value=""' autocomplete="false"/>
+	</div> -->
+
+
+
+	<!-- app -->
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=460722158f2b505f447a1a626950200b&plugin=AMap.Autocomplete,AMap.Driving,AMap.PlaceSearch,,AMap.AdvancedInfoWindow,AMap.Geocoder"></script>
+	<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+
+
+<script>
+	//选择器
+	function dq(selector) {
+		return document.querySelector(selector);
+	};
+	var ww = document.documentElement.clientWidth;
+	var wh = document.documentElement.clientHeight;
+	dq('#container').style.width = ww+'px';
+	dq('#container').style.height = (wh-300)+'px';
+
+
+	var map,route,geocoder;
+	var windowsArr = [];
+    var marker = [];
+
+	map = new AMap.Map('container', {
+        resizeEnable: true
+	});
+	nowLocation()
+	inputSearch()
+	
+	// 定位
+	function nowLocation(){
+		AMap.plugin(['AMap.Geolocation'], function() {
+			var geolocation = new AMap.Geolocation({
+				enableHighAccuracy: true,//是否使用高精度定位，默认:true
+				timeout: 10000,          //超过10秒后停止定位，默认：5s
+				buttonPosition:'RB',    //定位按钮的停靠位置
+				buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+				zoomToAccuracy: true,   //定位成功后是否自动调整地图视野到定位点
+			});
+			map.addControl(geolocation);
+			geolocation.getCurrentPosition(function(status,result){
+				if(status=='complete'){
+					// onComplete(result)
+				}else{
+					onError(result)
+				}
+			});
+    	});
+		//解析定位结果
+		function onComplete(data) {
+			document.getElementById('status').innerHTML='定位成功'
+			var str = [];
+			str.push('定位结果：' + data.position);
+			str.push('定位类别：' + data.location_type);
+			if(data.accuracy){
+				str.push('精度：' + data.accuracy + ' 米');
+			}//如为IP精确定位结果则没有精度信息
+			str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+			document.getElementById('result').innerHTML = str.join('<br>');
+		}
+		//解析定位错误信息
+		function onError(data) {
+			document.getElementById('status').innerHTML='定位失败'
+			document.getElementById('result').innerHTML = '失败原因排查信息:'+data.message;
+		}
+	}
+	
+	// 搜索input
+	function inputSearch(){
+		var autoOptions = {
+			input: "tipinput"
+		};
+		var auto = new AMap.Autocomplete(autoOptions);
+		var placeSearch = new AMap.PlaceSearch({
+			map: map
+		});  //构造地点查询类
+		AMap.event.addListener(auto, "select", select);//注册监听，当选中某条记录时会触发
+		function select(e) {
+			placeSearch.setCity(e.poi.adcode);
+			placeSearch.search(e.poi.name);  //关键字查询查询
+		}
+	}
+	
+	// 规划路线
+	function planRoute(lng,lat){
+		//绘制初始路径
+		var path = [];
+		path.push([121.506443,31.099893]);//起点
+		path.push([lng,lat]);//终点
+		map.plugin("AMap.DragRoute", function() {
+			route = new AMap.DragRoute(map, path, AMap.DrivingPolicy.LEAST_FEE); //构造拖拽导航类
+			route.search(); //查询导航路径并开启拖拽导航
+		});
+	}
+	
+	//位置转换成经纬度
+	
+	function addressChangeLogLat(inputText){
+		map.plugin(["AMap.Geocoder"], function() {     //加载地理编码插件
+			MGeocoder = new AMap.Geocoder({
+				city:"", //城市，默认：“全国”
+				//radius:1000 //范围，默认：500
+			});
+			//地理编码
+			MGeocoder.getLocation(inputText, function(status, result) {
+				//console.log(address,status);
+				if (status === 'complete' && result.info === 'OK') {
+					//TODO:获得了有效经纬度，可以做一些展示工作
+					//比如在获得的经纬度上打上一个Marker
+					console.log(result.geocodes[0].location);
+					var lng = result.geocodes[0].location.lng;   //获取经度
+					var lat = result.geocodes[0].location.lat;   //获取纬度
+					planRoute(lng,lat)
+				}else{
+					//获取经纬度失败
+				}
+			});
+    	});
+	}
+
+	// 监听输入框改变事件
+	function inputChange(){
+		var inputText = document.getElementById('tipinput').value;
+		addressChangeLogLat(inputText);
+
+	}
+</script>
+<script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<link href="../_css/mui.min.css" rel="stylesheet" />
+<script src="../_js/mui.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Gl4Ejnj0lMI8ukdEXflEiM1GDgGt1z9f"></script>
+<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+<script src="js/websocket.js"></script>
+<script src="js/fm.js"></script>
+<script src="js/mp3.js"></script>
+<script src="js/video.js"></script>
+<script src="js/map.js"></script>
+
+<title></title>
+</head>
+<body style="background:#eee;">
+
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<br>
+	<textarea readonly="readonly" id="text" style="margin:2%;padding:2%;height:60px;width:90%;border:1px solid #6C6C6C;-webkit-border-radius: 2px;border-radius: 2px;-webkit-appearance:none;display: none;"></textarea>
+	<div id="outpos"/>
+	<div id="output">
+		
+	<script type="text/javascript">
+	
+		// 语音识别  
+		window.onload = function(){
+			text=document.getElementById('text');
+			startRecognize();
+		}
+		var text=null;
+		var data={};
+		var indexList = [
+			["收音机"],
+			["导航","地图"],
+			["音乐","mp3"],
+			["视频"]
+		];
+		var index = 1;
+		function startRecognize() {
+			var options = {
+				engine: 'baidu',//语音识别引擎标识
+				//lang:"zh-cn",//语音识别引擎的语言
+				//punctuation:true,//识别结果中是否包含标点符号
+				continue:true,//语音识别是否采用持续模式,为true表示语音引擎不会根据语音输入自动结束
+				userInterface:false,//别时是否显示用户界面
+				//timeout:1000 //语音识别超时时间
+			};
+			text.value = '';
+			outSet('开始语音识别：');
+			plus.speech.startRecognize(options, function(s){
+
+				outLine(s);
+				console.log(s);
+
+				var index1 = parse_Array(indexList,s.replace("。",''));
+				if(index1 > -1){
+					index = index1;
+				}
+				console.log(parse_Array(indexList,s.replace("。",'')));
+				
+				
+				//检索收音机 处理
+				if(index == 0){
+					AudioObj.verifyWord(s);
+				}
+				// 检索到导航 处理
+				if(index == 1){
+					mapObj.voiceSearch(s);
+				}
+				// 检索到mp3 处理
+				if(index == 2){
+					mp3.verifyWord(s);
+				}
+				// 检索到视频 处理
+				if(index == 3){
+					video.verifyWord(s);
+				}
+
+
+			}, function(e){
+				outSet('语音识别失败：'+JSON.stringify(e));
+			} );
+		}
+
+	</script>
+</body>
+</html>

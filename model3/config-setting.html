@@ -1,0 +1,836 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<!-- <link rel="stylesheet" href="font/iconfont.css"> -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/config-setting.css" />
+	<script src="../_js/TimelineMax.js"></script>
+	<script src="../_js/TweenMax.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../_js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		// 车架号  5YJ3E7EB6KF229336
+		// 车牌号  沪ADB6272
+	</script>
+</head>
+
+<body class="">
+	<!-- 操作设置 -->
+	<div class="config-setting flexRow">
+		<div class="config-setting-left flexColumn">
+			<div class="close">
+				<span class="iconfont icon-guanbi"></span>
+			</div>
+			<div class="textList">
+				<ul>
+					<li class="flexRow liActive" data-id="1">
+						<span class="iconfont icon-switch"></span>快速控制
+					</li>
+					<li class="flexRow" data-id="2">
+						<span class="iconfont icon-deng"></span>车灯
+					</li>
+					<li class="flexRow" data-id="3">
+						<span class="iconfont icon-tongsuoguan"></span>车锁
+					</li>
+					<li class="flexRow" data-id="4">
+						<span class="iconfont icon-xianshidanmu"></span>显示
+					</li>
+					<li class="flexRow" data-id="5">
+						<span class="iconfont icon-che"></span>驾驶
+					</li>
+					<li class="flexRow" data-id="6">
+						<span class="iconfont icon-fangxiangpan"></span>
+						<span class="flexColumn"> <span>Autopilot</span> <span>自动辅助驾驶</span></span>
+					</li>
+					<li class="flexRow" data-id="7">
+						<span class="iconfont icon-daohang1"></span>导航
+					</li>
+					<li class="flexRow" data-id="8">
+						<span class="iconfont icon-jingshi"></span>安全
+					</li>
+					<li class="flexRow" data-id="9">
+						<span class="iconfont icon-banshou"></span>维护
+					</li>
+				</ul>
+			</div>
+			<div class="glove-box">
+				<div class="flexRow justSpaBetween">
+					<span class="iconfont icon-icon-hezi"></span><span>手套箱</span>
+				</div>
+			</div>
+		</div>
+		<div class="config-setting-right">
+			<!-- 快速控制 -->
+			<div class="box box1">
+				<div class="title">快速控制</div>
+				<div class="box-scroll">
+					<div>
+						<div class="title2">外部车灯</div>
+						<div class="postionRel">
+							<ul class="flexRow btnFour">
+								<li class="">关</li>
+								<li><span class="iconfont icon-shikuandeng"></span></li>
+								<li><span class="iconfont icon-jinguang"></span></li>
+								<li>自动</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+
+						<div class="flexRow justSpaBetween">
+							<div class="deng2 flexRow justSpaBetween">
+								<span class="iconfont icon-qianwudeng1"></span>
+								<span>前雾灯</span>
+							</div>
+							<div class="deng2 flexRow justSpaBetween">
+								<span class="iconfont icon-qianwudeng1 _rotateY180"></span>
+								<span>后雾灯</span>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="title2">调整范围</div>
+						<div>
+							<div class="flexRow justSpaBetween">
+								<div class="small-box small-box1">
+									<div>
+										<span class="iconfont icon-xinicom _rotateY180"></span>
+										<span class="iconfont icon-xinicom"></span>
+									</div>
+									<div>后视镜</div>
+								</div>
+								<div class="small-box small-box2">
+									<div>
+										<span class="iconfont icon-fangxiangpan"></span>
+									</div>
+									<div>方向盘</div>
+								</div>
+							</div>
+							<div class="deng2 fold">折叠</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="title2">车窗</div>
+						<div class="deng2 flexRow justSpaBetween">
+							<span class="iconfont icon-diandongchechuang"></span>
+							<span>车窗</span>
+						</div>
+					</div>
+
+					<div>
+						<div class="title2">显示亮度</div>
+						<div class="flexRow justSpaBetween">
+							<span class="iconfont icon-liangdu"></span>
+							<div class="mui-input-row mui-input-range">
+								<input type="range" min="0" max="100">
+							</div>
+							<span class="iconfont icon-liangdu"></span>
+							<div class="btn btnBlueActive">自动</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 车灯 -->
+			<div class="box box2 dn">
+				<div class="title">车灯</div>
+				<div class="box-scroll">
+					<div>
+						<div class="title2">外部</div>
+						<div class="line"></div>
+						<div class="title2">大灯</div>
+						<div class="postionRel">
+							<ul class="flexRow btnFour">
+								<li>关</li>
+								<li><span class="iconfont icon-shikuandeng"></span></li>
+								<li><span class="iconfont icon-jinguang"></span></li>
+								<li>自动</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+
+						<div class="flexRow justSpaBetween">
+							<div class="deng2 flexRow justSpaBetween">
+								<span class="iconfont icon-qianwudeng1"></span>
+								<span>前雾灯</span>
+							</div>
+							<div class="deng2 flexRow justSpaBetween">
+								<span class="iconfont icon-qianwudeng1 _rotateY180"></span>
+								<span>后雾灯</span>
+							</div>
+						</div>
+					</div>
+					<div class="top">
+						<div class="title2">内部</div>
+						<div class="line"></div>
+						<div class="title2">顶灯</div>
+						<div class="postionRel">
+							<ul class="flexRow btnThree">
+								<li>关</li>
+								<li>开</li>
+								<li>自动</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div class="deng2 fold">氛围灯</div>
+					</div>
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">自动远光灯</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">大灯延迟照明</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">方向盘照明</div>
+					</div>
+				</div>
+			</div>
+			<!-- 车锁 -->
+			<div class="box box3 dn">
+				<div class="title">车锁</div>
+				<div class="box-scroll">
+					<div class="flexRow justSpaBetween">
+						<div class="title2">钥匙</div>
+						<div class="add marginAuto0"><span class="iconfont icon-iconfont7"></span></div>
+					</div>
+					<div class="key">
+						<div class="flexRow justSpaBetween margin200">
+							<div class="flexRow">
+								<div class="marginAuto0"><span class="iconfont icon-qiapian"></span></div>
+								<div>
+									<div>key</div>
+									<div>8:20 | Key</div>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="marginAuto0"><span class="iconfont icon-bi"></span></div>
+								<div class="marginAuto0"><span class="iconfont icon-shanchu1"></span></div>
+							</div>
+						</div>
+						<div class="flexRow justSpaBetween margin200">
+							<div class="flexRow">
+								<div class="marginAuto0"><span class="iconfont icon-qiapian"></span></div>
+								<div>
+									<div>key</div>
+									<div>8:20 | Key</div>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="marginAuto0"><span class="iconfont icon-bi"></span></div>
+								<div class="marginAuto0"><span class="iconfont icon-shanchu1"></span></div>
+							</div>
+						</div>
+					</div>
+					<div class="line"></div>
+
+					<div class="flexRow justSpaBetween margin200">
+						<div class="deng2 flexRow justSpaBetween">
+							<span class="iconfont icon-diandongchechuang"></span>
+							<span>车窗锁</span>
+						</div>
+						<div class="deng2 flexRow justSpaBetween">
+							<span class="iconfont icon-tongsuokai"></span>
+							<span>儿童锁</span>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">驻车时解锁</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">锁定提示音</div>
+					</div>
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">离车后自动上锁</div>
+					</div>
+				</div>
+			</div>
+			<!-- 显示 -->
+			<div class="box box4 dn">
+				<div class="title">车锁</div>
+				<div class="box-scroll">
+					<div>
+						<div class="title2">显示模式</div>
+						<div class="postionRel">
+							<ul class="flexRow btnThree">
+								<li>日间</li>
+								<li>夜间</li>
+								<li>自动</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div>
+							<div class="title2">亮度</div>
+							<div class="flexRow justSpaBetween">
+								<span class="iconfont icon-liangdu"></span>
+								<div class="mui-input-row mui-input-range">
+									<input type="range" min="0" max="100" data-input-slider="4"><span class="mui-tooltip mui-hidden"></span>
+								</div>
+								<span class="iconfont icon-liangdu"></span>
+								<div class="btn btnBlueActive">自动</div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="deng2 fold">屏幕清洁模式</div>
+						<div class="line"></div>
+						<div class="title2">语言</div>
+						<div>
+							<select name="" id="">
+								<option value="">简体中文</option>
+								<option value="">英文</option>
+							</select>
+						</div>
+						<div class="line"></div>
+						<div class="title2">时间格式</div>
+						<div class="postionRel">
+							<ul class="flexRow time btnTwo">
+								<li>12小时</li>
+								<li>24小时</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div class="title2">距离</div>
+						<div class="postionRel">
+							<ul class="flexRow distance btnTwo">
+								<li>KILOMETERS</li>
+								<li>MILES</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div class="title2">温度</div>
+						<div class="postionRel">
+							<ul class="flexRow distance btnTwo">
+								<li>℃</li>
+								<li>℉</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div class="title2">胎压</div>
+						<div class="postionRel">
+							<ul class="flexRow distance btnTwo">
+								<li>BAR</li>
+								<li>PSI</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 驾驶 -->
+			<div class="box box5 dn">
+				<div class="title">驾驶</div>
+				<div class="box-scroll">
+					<div class="title2">加速</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnTwo">
+							<li>轻松</li>
+							<li>运动</li>
+						</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="title2">转向模式</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnThree">
+							<li>舒适</li>
+							<li>标准</li>
+							<li>运动</li>
+						</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="title2">能量回收制动</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnTwo">
+							<li>标准</li>
+							<li>低</li>
+						</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="line"></div>
+					<div class="deng2 flexRow justSpaBetween">
+						<span class="iconfont icon-flagborder"></span>
+						<span>赛道模式</span>
+					</div>
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">
+							<div>缓行</div>
+							<div class="smallText">释放制动踏板后车辆缓慢移动</div>
+						</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">
+							<div>湿滑路面辅助</div>
+							<div class="smallText">用于帮助车辆从雪地、沙地或泥地脱困</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 自动辅助驾驶 -->
+			<div class="box box6 dn">
+					<div class="title">Autopilot 自动辅助驾驶</div>
+					<div class="box-scroll">
+						<div class="title2">巡航跟车距离</div>
+						<div class="flexRow justSpaBetween setNum">
+							<span class="iconfont icon-jianhao"></span>
+							<div><span class="num id1Text">3</span></div>
+							<span class="iconfont icon-iconfont7"></span>
+						</div>
+						<div class="flexRow margin200">
+							<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+								<div class="mui-switch-handle"></div>
+							</div>
+							<div class="marginAuto0">
+								<div>辅助转向（测试版）</div>
+								<div class="smallText">召唤（测试版）</div>
+							</div>
+						</div>
+						<div class="deng2 fold">自定义召唤</div>
+						<div class="line"></div>
+						<div class="title2">限速警报</div>
+						<div class="postionRel">
+							<ul class="flexRow time btnThree">
+								<li>关</li>
+								<li>显示</li>
+								<li>蜂鸣</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+					
+						<div class="flexRow">
+							<div class="width50">
+								<div class="title2">限速</div>
+								<div class="postionRel">
+									<ul class="flexRow time btnTwo">
+										<li>相对</li>
+										<li>绝对</li>
+									</ul>
+									<div class="btn2Active btn3Active"></div>
+								</div>
+							</div>
+							<div class="width50">
+								<div class="title2">偏移</div>
+								<div class="flexRow justSpaBetween setNum width94">
+									<span class="iconfont icon-jianhao"></span>
+									<div>+<span class="num">0</span> km/h</div>
+									<span class="iconfont icon-iconfont7"></span>
+								</div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="title2">限速警报</div>
+						<div class="postionRel">
+							<ul class="flexRow btnFour">
+								<li>关</li>
+								<li>较晚</li>
+								<li>适中</li>
+								<li>较早</li>
+							</ul>
+							<div class="btn2Active"></div>
+						</div>
+						
+						<div class="flexRow margin200">
+							<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+								<div class="mui-switch-handle"></div>
+							</div>
+							<div class="marginAuto0">车道偏离报警</div>
+						</div>
+						<div class="flexRow margin200">
+							<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+								<div class="mui-switch-handle"></div>
+							</div>
+							<div class="marginAuto0">盲点碰撞报警蜂鸣<span class="iconfont icon-weibiaoti--"></span></div>
+						</div>
+						<div class="flexRow margin200">
+							<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+								<div class="mui-switch-handle"></div>
+							</div>
+							<div class="marginAuto0">自动紧急制动</div>
+						</div>
+						<div class="flexRow margin200">
+							<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+								<div class="mui-switch-handle"></div>
+							</div>
+							<div class="marginAuto0">障碍物感应限速<span class="iconfont icon-weibiaoti--"></span></div>
+						</div>
+					</div>
+			</div>
+			<!-- 导航 -->
+			<div class="box box7 dn">
+				<div class="title">导航</div>
+				<div class="box-scroll">
+					<div class="flexRow margin20Auto">
+						<div class="marginAuto0 audioIcon"><span class="iconfont icon-yinliang"></span></div>
+						<div class="flexRow audioSet marginAuto0">
+							<div class="marginAuto0"><span class="iconfont icon-jianhao"></span></div>
+						
+							<p class="mui-progressbar mui-progressbar-in" data-progress="20">
+								<span style="transform: translate3d(-80%, 0px, 0px);"></span>
+							</p>
+								
+							<div class="marginAuto0"><span class="iconfont icon-iconfont7"></span></div>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">
+							<div>行程规划（测试版）</div>
+							<div class="smallText">如果需要充电才能到达目的地，会在超级充电站添加经停点。</div>
+						</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">
+							<div>在线路线规划</div>
+							<div class="smallText">生成推荐路线，并在导航时引入实时路况信息。</div>
+							<div class="margin20Auto">重新规划路线，如果节省时间超过：</div>
+							<div class="flexRow justSpaBetween setNum width70">
+								<span class="iconfont icon-jianhao"></span>
+								<div class="flexRow"><span class="num">10</span> min</div>
+								<span class="iconfont icon-iconfont7"></span>
+							</div>
+						</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">避开收费站</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 安全 -->
+			<div class="box box8 dn">
+				<div class="title">安全</div>
+				<div class="box-scroll">
+					<div class="flexRow">
+						<div class="flexColumn save">
+							<div class="saveBox">
+								<div class="flexRow saveBox1">
+									<div class="pMargin"><span class="iconfont icon-P"></span></div>
+									<div class="marginAuto0">驻车制动</div>
+								</div>
+								<div class="saveBox2">制动开</div>
+							</div>
+							<div class="fold">脚必须放在制动踏板上</div>
+						</div>
+						<div class="saveBox3">也可以选择换挡杆上的一个档位</div>
+					</div>
+					<div class="line"></div>
+					<div class="deng2 fold">关闭电源</div>
+					<div class="line"></div>
+					<div class="title2">速度限制模式</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active marginAuto0">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="flexRow justSpaBetween setNum width50">
+							<span class="iconfont icon-jianhao"></span>
+							<span class="flexRow"><span>131</span> km/h</span>
+							<span class="iconfont icon-iconfont7"></span>
+						</div>
+					</div>
+					<div class="title2">副驾位前气囊</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnTwo">
+							<li class="flexRow justSpaAround">
+								<span class="iconfont icon-anquanqinang"></span>
+								<span>关</span>
+							</li>
+							<li class="flexRow justSpaAround">
+								<span class="iconfont icon-anquanqinang"></span>
+								<span>开</span>
+							</li>
+						</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="title2">行人报警</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnTwo">
+								<li>开</li>
+								<li>暂关</li>
+							</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">哨兵模式</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">驻车辅助蜂鸣</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">安全警报</div>
+					</div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">行车密码</div>
+					</div>
+					<div class="line"></div>
+					<div class="title2">驾驶室过热保护</div>
+					<div class="postionRel">
+						<ul class="flexRow time btnThree">
+							<li>关</li>
+							<li>无A/C</li>
+							<li>开</li>
+						</ul>
+						<div class="btn2Active"></div>
+					</div>
+					
+					<div class="line"></div>
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">允许手机访问</div>
+					</div>
+					<div class="deng2 fold">数据分享</div>
+				</div>
+			</div>
+			<!-- 维护 -->
+			<div class="box box9 dn">
+				<div class="title">维护</div>
+				<div class="box-scroll">
+					<div class="flexRow margin200">
+						<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="marginAuto0">雨刮器维护模式</div>
+					</div>
+					<div class="deng2 fold">关闭电源</div>
+					<div class="deng2 fold">恢复出厂设置</div>
+					<div class="line"></div>
+					<div class="deng2 flexRow justSpaBetween book">
+						<span class="iconfont icon-shu"></span>
+						<span>车主手册</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 浮层 -->
+		<div class="ovlayer dn">
+			<div class="ovlayer-main">
+				<div><span class="iconfont icon-guanbi"></span></div>
+				<div>使用方向盘左侧的控制按钮调节侧方后视镜</div>
+				<div class="flexRow houshijing">
+					<div class="houshijingBox leftHouJing active">
+						<div><span class="iconfont icon-xinicom _rotateY180"></span></div>
+						<div>左</div>
+					</div>
+					<div class="houshijingBox rightHouJing">
+						<div><span class="iconfont icon-xinicom"></span></div>
+						<div>右</div>
+					</div>
+				</div>
+				
+				<div class="flexRow margin200">
+					<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+					<div class="marginAuto0">后视镜自动倾斜</div>
+				</div>
+	
+				<div class="flexRow margin200">
+					<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+					<div class="marginAuto0">后视镜自动折叠</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 操作设置 -->
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+		// 切换tab
+		mui('.textList').on('tap','li',function(){
+			let _this = this
+			for(let i=0;i<mui('.textList li').length;i++){
+				mui('.box')[i].classList.add('dn')
+				mui('.textList li')[i].classList.remove('liActive')
+			}
+			mui('.box')[_this.getAttribute('data-id')-1].classList.remove('dn')
+			mui('.textList li')[_this.getAttribute('data-id')-1].classList.add('liActive')
+		})
+		// 2个，3个，4个 连体按钮的 切换
+		var tl1 = new TimelineMax({})
+		mui('.box ul').on('tap','li',function(){
+			let _this = this;
+			// 获取当前元素的父级的子级个数
+			let liListLength = _this.parentNode.children.length;
+			let num = (_this.clientWidth * $(_this).index())+'px';
+			tl1.to($( _this.parentNode.parentNode.children[1]), 0.5, {left:num,ease: Power0.easeNone});
+		})
+		// 单个按钮的切换
+		mui('.box').on('tap','.deng2',function(){
+			let _this = this;
+			//当前元素的状态值
+			let active = _this.classList.contains('deng2Active')
+			if(active){
+				_this.classList.remove('deng2Active')
+			}else{
+				_this.classList.add('deng2Active')
+			}
+		})
+		// 加减计算值
+		mui('.setNum').on('tap','.icon-jianhao',function(){
+			let _this = this;
+			console.log(_this);
+			
+			let text = _this.parentNode.children[1].children[0].innerText;
+			text --;
+			if(text <0){
+				return;
+			}
+			_this.parentNode.children[1].children[0].innerText = text
+		})
+
+		mui('.setNum').on('tap','.icon-iconfont7',function(){
+			let _this = this;
+			let text = _this.parentNode.children[1].children[0].innerText;
+			text ++;
+			if(text >10){
+				return;
+			}
+			_this.parentNode.children[1].children[0].innerText = text
+		})
+
+		// 音量
+		mui('.audioSet').on('tap','.icon-jianhao',function(){
+			audioSet("reduce")
+		})
+		mui('.audioSet').on('tap','.icon-iconfont7',function(){
+			audioSet("add")
+		})
+		mui('.box7').on('swipeleft','.audioIcon',function(){
+			audioSet("reduce")
+		})
+		mui('.box7').on('swiperight','.audioIcon',function(){
+			audioSet("add")
+		})
+
+		function audioSet(state){
+			if(state == "reduce"){
+				let progress = mui('.mui-progressbar')[0].getAttribute('data-progress')
+				if(progress <= 0){
+					return
+				}
+				progress = Number(progress) - 10
+				mui('.mui-progressbar')[0].setAttribute('data-progress',progress ) 
+				progress = -100 + progress 
+				mui('.mui-progressbar span')[0].style.transform = "translate3d("+progress+"%, 0px, 0px)"
+			}
+
+			if(state == "add"){
+				let progress = mui('.mui-progressbar')[0].getAttribute('data-progress')
+				if(progress >=100){
+					return
+				}
+				progress = Number(progress) + 10
+				mui('.mui-progressbar')[0].setAttribute('data-progress',progress) 
+				progress = -100 + progress
+				mui('.mui-progressbar span')[0].style.transform = "translate3d("+progress+"%, 0px, 0px)"
+			}
+		}
+
+
+		//打开用户手册
+		mui('.book').on('tap','span',function(){
+			// video.pause()
+			dq('.book').classList.remove('dn')
+		})
+
+		//打开后视镜操作提示
+		mui('.small-box1').on('tap','div',function(){
+			dq('.ovlayer').classList.remove('dn')
+		})
+		// 切换左右后视镜
+		mui('.houshijing').on('tap','.houshijingBox',function(){
+			let _this = this
+			console.log(dq('.houshijing').children.length);
+			for(let i=0;i<dq('.houshijing').children.length;i++){
+				dq('.houshijing').children[i].classList.remove('active')
+			}
+			
+			_this.classList.add('active')
+		})
+
+		//关闭当前页面
+		mui('.close').on('tap','.icon-guanbi',function(){
+			// video.pause()
+			dq('.config-setting').classList.add('dn')
+		})
+		// 关闭浮层
+		mui('.ovlayer').on('tap','.icon-guanbi',function(){
+			dq('.ovlayer').classList.add('dn')
+		})
+		
+	</script>
+</body>
+
+</html>

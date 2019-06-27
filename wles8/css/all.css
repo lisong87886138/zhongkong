@@ -1,0 +1,890 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+img {
+  width: 100%;
+}
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.displayFlexRow {
+  display: flex;
+  flex-direction: row;
+}
+.displayFlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+._rotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+._rotateY180 {
+  transform: rotateY(180deg);
+  display: inline-block;
+}
+.marginAuto {
+  margin: auto;
+}
+.marginAuto0 {
+  margin: auto 0;
+}
+.textCenter {
+  text-align: center;
+}
+.margin200 {
+  margin: 20px 0;
+}
+.mui-action-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.warrper {
+  width: 100%;
+  height: 100%;
+}
+.screen {
+  width: 100%;
+  background: #0d1335;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+.screen .iconfont {
+  color: #fff;
+  font-size: 0.2rem;
+}
+.screen .screen-top {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+}
+.screen .screen-top .headImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #000;
+  margin-right: 10px;
+  background: #fff;
+}
+.screen .screen-top .screen-top-right {
+  width: 25%;
+  justify-content: space-around;
+  margin: auto 0;
+}
+.screen .screen-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px 0;
+}
+.screen .screen-footer .iconfont {
+  font-size: 0.2rem;
+}
+.screen .screen-footer .numb-1 {
+  font-size: 0.4rem;
+}
+.screen .screen-footer .icon-neixunhuan1 {
+  font-size: 0.4rem;
+  color: #34C2FF;
+}
+.screen .screen-footer .icon-zuoyi {
+  font-size: 0.3rem;
+  border-radius: 50%;
+  border: 2px solid #34C2FF;
+  padding: 5px;
+  color: #34C2FF;
+  margin: 0 10px;
+}
+.screen .screen-footer .textWD {
+  font-size: 0.25rem;
+}
+.screen .screen-footer .width18 {
+  width: 18%;
+}
+.screen .screen-footer .width24 {
+  width: 24%;
+}
+.screen .screen-main {
+  background: rgba(0, 0, 0, 0.9);
+  height: 93%;
+}
+.screen .screen-main .mui-table-view {
+  background: inherit;
+}
+.screen .screen-main .mui-table-view .mui-navigate-right:after,
+.screen .screen-main .mui-table-view .mui-push-left:after,
+.screen .screen-main .mui-table-view .mui-push-right:after {
+  color: #fff;
+}
+.screen .screen-main .list-content {
+  width: 90%;
+  justify-content: space-between;
+}
+.screen .screen-main .list-content2 {
+  width: 90%;
+  justify-content: space-around;
+}
+.screen .screen-main .anmoBtn {
+  border: 1px solid #eee;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px auto;
+}
+.screen .screen-main .allSetting {
+  position: relative;
+  margin: 30px 0;
+}
+.screen .screen-main .allSetting:after {
+  content: '\e583';
+  font-family: Muiicons;
+  font-size: inherit;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+.screen .screen-main .map {
+  width: 100%;
+  height: 76%;
+}
+.screen .screen-main .setMp3Kongqi {
+  margin-top: 3px;
+  height: 18% ;
+}
+.screen .screen-main .setMp3Kongqi .textMp3Name {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.screen .screen-main .setMp3Kongqi .textMp3Author {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.screen .screen-main .setMp3Kongqi .twoSlide .icon-bofang2 {
+  font-size: 0.25rem;
+}
+.screen .screen-main .setMp3Kongqi .nowAddress {
+  margin-top: 30px;
+  color: #b7edfe;
+}
+.screen .screen-main .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.screen .screen-main .swiper-pagination-bullet {
+  width: 40px;
+  height: 2px;
+  border-radius: 0;
+  background: #eee;
+  opacity: 1;
+}
+.screen .screen-main .swiper-pagination-bullet-active {
+  background: #34C2FF;
+}
+.screen .screen-main .swiper-pagination {
+  bottom: 25px;
+}
+.screen .screen-main .textTitle1 {
+  margin: 20px;
+}
+.screen .screen-main .textTime {
+  margin: 20px;
+  font-size: 0.3rem;
+}
+.screen .screen-main .slide3-top {
+  height: 74%;
+}
+.screen .screen-main .carImg {
+  width: 60%;
+  margin: 40px auto;
+  display: block;
+}
+.screen .screen-main .yuan {
+  border: 1px solid #eee;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: auto;
+}
+.screen .screen-main .yuan2 {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px auto;
+  background: #494949;
+}
+.screen .screen-main .setLanVideo {
+  height: 18%;
+}
+.screen .screen-main .twoSlide {
+  width: 49%;
+  background: #34C2FF;
+  padding: 20px;
+}
+.screen .screen-main .twoSlide .icon-wulanya {
+  font-size: 0.4rem;
+}
+.screen .screen-main .twoSlide .textLanya {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.screen .screen-main .twoSlide .textVideo {
+  text-align: left;
+  margin-bottom: 50px;
+}
+.screen .screen-main .twoSlide .lanyaBtn {
+  color: #288CD8;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.screen .screen-main .twoSlide .icon-bofang2 {
+  font-size: 0.4rem;
+  vertical-align: text-top;
+}
+.screen .screen-main .listClick {
+  margin-top: 15%;
+}
+.screen .screen-setting {
+  background: #000;
+  width: 100%;
+  height: 93%;
+  position: relative;
+}
+.screen .screen-setting .tabUl {
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 0.5px solid #eee;
+}
+.screen .screen-setting .tabUl li {
+  padding: 20px;
+}
+.screen .screen-setting .tabUl .active {
+  border-bottom: 2px solid #a5f1ff;
+}
+.screen .screen-setting .yuan2 {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px auto;
+  background: #494949;
+}
+.screen .screen-setting .settingBox {
+  padding: 20px 0;
+}
+.screen .screen-setting .settingBox .wind {
+  margin: 30px;
+}
+.screen .screen-setting .settingBox .wind span {
+  padding: 15px 30px;
+  background: #223472;
+  border-radius: 8px;
+  width: 16%;
+  display: inline-block;
+}
+.screen .screen-setting .settingBox .wind .active {
+  background: #61eafd;
+}
+.screen .screen-setting .settingBox .skylight {
+  width: 18%;
+  margin: 0 auto;
+  text-align: center;
+}
+.screen .screen-setting .settingBox .skylight span:nth-child(1) {
+  font-size: 0.5rem;
+  border: 2px solid #ddffff;
+  padding: 30px 10px 63px 10px;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 10px;
+}
+.screen .screen-setting .settingBox .skylight .icon-top-line:before,
+.screen .screen-setting .settingBox .skylight .icon-below-line:before {
+  background: #61eafd;
+  border-radius: 50%;
+  padding: 0 2px;
+}
+.screen .screen-setting .settingBox .skylight span:nth-child(2) {
+  font-size: 0.5rem;
+  border: 2px solid #ddffff;
+  padding: 63px 10px 30px 10px;
+  border-radius: 0 0 16px 16px ;
+}
+.screen .screen-setting .settingBox .trunkImg {
+  width: 50%;
+  text-align: center;
+}
+.screen .screen-setting .settingBox .trunkBtn {
+  padding: 10px 20px;
+  background: #4e639c;
+  width: 20%;
+  text-align: center;
+  margin: 10px auto;
+}
+.screen .screen-setting .settingBox .title {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.screen .screen-setting .settingBox .text2 {
+  margin: auto 0;
+}
+.screen .screen-setting .settingBox .textBtn {
+  margin: auto 0;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+.screen .screen-setting .settingBox .settingTabLine {
+  padding: 20px;
+  background: #4e639c;
+  border-bottom: 0.5px solid #334a8f;
+}
+.screen .screen-setting .settingBox .btnBox .active {
+  background: #61eafd;
+}
+.screen .screen-setting .settingBox .width25Btn {
+  width: 25%;
+  background: #4e639c;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 5px;
+}
+.screen .screen-setting .settingBox .width33Btn {
+  width: 33%;
+  background: #4e639c;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 5px;
+}
+.screen .screen-setting .settingBox .width50Btn {
+  width: 50%;
+  background: #4e639c;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin: 0 5px;
+}
+.screen .screen-setting .settingBox .progress {
+  margin: 10px 0;
+}
+.screen .screen-setting .settingBox .progress div {
+  margin: 20px 0;
+}
+.screen .screen-setting .settingBox .colorInput[type=range] {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  background: linear-gradient(to right, #ffa4b6 10%, #ffffc0 20%, #ffffff, #566894 70%, #e3f9f9 80%, #f9f9f9 91%, #f9a6ff 100%);
+}
+.screen .screen-setting .settingBox .colorInput[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%;
+  /*外观设置为圆形*/
+}
+.screen .screen-setting .settingBox .lingeInput[type=range] {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  background: linear-gradient(to right, #86c9ef 50%, #ffffff 100%);
+}
+.screen .screen-setting .settingBox .lingeInput[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%;
+  /*外观设置为圆形*/
+}
+.screen .screen-setting .settingBox .massageImg {
+  width: 20%;
+}
+.screen .screen-setting .settingBox .anmoBtn {
+  border: 1px solid #eee;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px auto;
+}
+.screen .screen-setting .settingBox .chejiaImg {
+  position: relative;
+  width: 60%;
+}
+.screen .screen-setting .settingBox .chejiaImg .chejia {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
+.screen .screen-setting .settingBox .chejiaImg .chelun {
+  width: 20%;
+  position: absolute;
+  left: 33%;
+  top: 60%;
+}
+.screen .screen-setting .settingBox .xuanjai {
+  width: 20%;
+  margin-left: 20px;
+  margin-bottom: 7%;
+}
+.screen .screen-setting .settingBox .xuanjai ul {
+  background: #39457f;
+}
+.screen .screen-setting .settingBox .xuanjai li {
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 8px;
+}
+.screen .screen-setting .settingBox .xuanjai .active {
+  background: #7ef7ff;
+}
+.screen .screen-setting .settingBox .mui-table-view {
+  background: #39457f;
+}
+.screen .screen-setting .settingBox .mui-table-view:after,
+.screen .screen-setting .settingBox .mui-table-view:before {
+  background-color: inherit;
+}
+.screen .screen-setting .ovlBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #39457f;
+  z-index: 2;
+  padding: 20px;
+}
+.screen .screen-setting .ovlBox .icon-jiantou1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.screen .contont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  display: none;
+}
+.muen-main {
+  width: 100%;
+  height: 100%;
+  background: #141c43;
+}
+.muen-main .muenBox {
+  display: flex;
+  padding: 10% 17%;
+  flex-wrap: wrap;
+}
+.muen-main .muenList {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: #5974c5;
+  width: 18%;
+  margin: 7%;
+}
+.muen-main .muenList div {
+  margin-top: 10px;
+}
+.book-main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.book-main {
+  background: #0d1335;
+  width: 100%;
+  height: 92.6%;
+  overflow-y: scroll;
+}
+.book-main .headTitle {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 0.5px solid #eee;
+}
+.book-main h1 {
+  color: #86cfde;
+  font-size: 0.2rem;
+}
+.book-main div {
+  padding: 10px 0;
+}
+.book-main .bookMiddle {
+  padding: 20px;
+  letter-spacing: 2px;
+  font-size: 0.18rem;
+  line-height: 24px;
+}
+.book-main table {
+  margin: 10px 0;
+}
+.book-main td {
+  padding: 10px;
+}
+.air-main {
+  background: #0d1335;
+  padding: 20px;
+}
+.air-main .mui-segmented-control .mui-control-item.mui-active {
+  background: inherit;
+  border-bottom: 1px solid #61eafd;
+}
+.air-main .mui-segmented-control {
+  border: none;
+}
+.air-main .mui-segmented-control .mui-control-item {
+  border-left: none;
+  color: #fff;
+}
+.air-main .airHeader {
+  padding: 10px;
+  width: 16%;
+}
+.air-main .textColorBlue,
+.air-main .iconfont {
+  color: #61eafd;
+}
+.air-main .wendu {
+  font-size: 0.5rem;
+  padding: 40px 0;
+}
+.air-main .airBtnBox {
+  margin: 50px 0;
+}
+.air-main .airBtnBox .iconfont {
+  font-size: 0.3rem;
+}
+.air-main .airBtnBox .airBtn {
+  border: 1px solid #fff;
+  width: 20%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.air-main .airBtnBox .active {
+  border: 1px solid #61eafd;
+}
+.air-main .fengInput[type=range] {
+  vertical-align: 2px;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  width: 70%;
+  height: 10px;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  background: linear-gradient(#61eafd, #61eafd) no-repeat #cccccc;
+  background-size: 30% 100%;
+}
+.air-main .fengInput[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%;
+  /*外观设置为圆形*/
+}
+.air-main .airBtnBox2 .airYuan {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  text-align: center;
+  line-height: 70px;
+}
+.air-main .airBtnBox2 .iconfont {
+  color: #fff;
+}
+.air-main .airBtnBox2 .active {
+  color: #61eafd;
+  border: 2px solid #61eafd;
+}
+.air-main .airBtnBox2 .active .iconfont {
+  color: #61eafd;
+}
+.air-main .wendutongbu {
+  margin: 50px 0;
+}
+.power-main .title {
+  padding: 20px 0;
+}
+.power-main .powerBox {
+  align-items: center;
+  margin: 30px 0;
+}
+.power-main .middleYuan {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #61eafd;
+  border-radius: 50%;
+  text-align: center;
+}
+.power-main .middleYuan div {
+  margin-top: 24px;
+}
+.power-main .bigYuan {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #61eafd;
+  border-radius: 50%;
+  text-align: center;
+}
+.power-main .bigYuan div {
+  margin-top: 42px;
+}
+.power-main .zhexianBtn {
+  margin: 30px 0;
+}
+.power-main .zhexianBtn span {
+  padding: 10px 20px;
+  background: #32435f;
+  cursor: pointer;
+}
+.power-main .zhexianBtn .active {
+  background: #04ceff;
+}
+.battery-main .title {
+  padding: 20px 0;
+}
+.battery-main .bigText {
+  font-size: 0.3rem;
+}
+.battery-main .batteryImg {
+  margin: 30px 0;
+  position: relative;
+}
+.battery-main .batteryImg img {
+  width: 24%;
+}
+.battery-main .batteryImg span {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 50%;
+  margin-left: -17px;
+}
+.battery-main .textTitle {
+  margin: 0 14%;
+}
+.flow-main .title {
+  padding: 20px 0;
+}
+.flow-main .flowYuan {
+  width: 19%;
+  border: 1px solid #04ceff;
+  border-radius: 50%;
+  margin: 20px auto;
+  padding: 5%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #2495bd 100%);
+}
+.flow-main .smallText {
+  font-size: 0.1rem;
+}
+.flow-main .textTitle {
+  margin: 0 14%;
+}
+.setting2-main {
+  background: #0d1335;
+  padding: 20px;
+}
+.setting2-main .mui-segmented-control .mui-control-item.mui-active {
+  background: inherit;
+  border-bottom: 1px solid #61eafd;
+}
+.setting2-main .mui-segmented-control {
+  border: none;
+}
+.setting2-main .mui-segmented-control .mui-control-item {
+  border-left: none;
+  color: #fff;
+}
+.setting2-main .setting2Header {
+  padding: 10px;
+  width: 56%;
+}
+.setting2-main .textColorBlue,
+.setting2-main .iconfont {
+  color: #fff;
+}
+.setting2-main .mui-control-content {
+  padding: 20px;
+}
+.setting2-main .setting2List {
+  background: #4f5857;
+  padding: 15px 20px;
+  border-bottom: 0.5px solid #45465a;
+}
+.setting2-main .title {
+  margin: 20px 0 10px 20px;
+}
+.setting2-main .clause {
+  margin: 20px 0;
+}
+.setting2-main .clause span {
+  color: #61eafd;
+  cursor: pointer;
+}
+.setting2-main input[type=range] {
+  vertical-align: 2px;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  width: 70%;
+  height: 1px;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  background: linear-gradient(#61eafd, #61eafd) no-repeat #cccccc;
+  background-size: 30% 100%;
+}
+.setting2-main input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%;
+  /*外观设置为圆形*/
+}
+.setting2-main .margin20-0 {
+  padding: 20px 0;
+  background: #4f5857;
+}
+.setting2-main .margin20-0 span {
+  vertical-align: sub;
+}
+.weather-main {
+  padding: 20px;
+}
+.weather-main .address {
+  color: #04ceff;
+}
+.weather-main .weatherBox {
+  margin: 20px 0;
+}
+.dirve-main {
+  padding: 20px;
+  position: relative;
+}
+.dirve-main .setting2List {
+  background: #4f5857;
+  padding: 15px 20px;
+  border-bottom: 0.5px solid #45465a;
+}
+.dirve-main .title {
+  margin: 20px 0 10px 20px;
+}
+.dirve-main .ovlBox {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #0d1335;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: none;
+}
+.dirve-main .ovlBox .ovlText {
+  padding: 20px 10px 10px 10px;
+}
+.dirve-main .ovlBox .icon-jiantou1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.albumBox::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.album-main {
+  padding: 20px;
+  width: 100%;
+  height: 92%;
+}
+.album-main .albumBox {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+.album-main .time {
+  margin: 20px 0 10px 0;
+}
+.album-main .imgBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.album-main .imgBox img {
+  width: 33%;
+  padding: 5px;
+}
+.reversing-main #video {
+  width: 100%;
+}
+.reversing-main .carImg {
+  width: 10%;
+  margin: auto;
+}

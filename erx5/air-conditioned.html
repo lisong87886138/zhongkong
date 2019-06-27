@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+</head>
+
+<body id="air-page">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <div class="mui-content">
+        <!-- 内容 -->
+        <div class="title">
+            <div class="borderBottom" data-id="1">空调</div>
+            <div class="" data-id="2">净化器</div>
+        </div>
+        <div class="air-box1">
+            <div class="disFelxRow juContSpEve air-tab">
+                <div class="yuan yuan-active" data-state="true"><span class="iconfont icon-kaiguan"></span></div>
+                <div class="yuan" data-state="false">AC</div>
+                <div class="yuan" data-state="false"><span class="iconfont icon-neixunhuan"></span></div>
+                <div class="yuan" data-state="false">ECON</div>
+            </div>
+            <div class="text1">
+                <span>车外： <span>8</span>℃ 空气质量 <span>78</span></span>
+            </div>
+            <div style="text-align: center;margin:20px 0;">
+                <img src="images/book-car.png" alt="">
+            </div>
+            <div class="disFelxColu wind-power">
+                <div class="disFelxRow juContSpAro">
+                    <div class="iconTop"><span class="iconfont icon-fengshan icon-fengshan1" data-state="0"></span></div>
+                    <div class="progress disFelxRow">
+                        <span class="progress-active"></span>
+                        <!-- <span></span> -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="iconTop"><span class="iconfont icon-fengshan icon-fengshan2" data-state="1"></span></div>
+                </div>
+                <div class="auto">AUTO</div>
+            </div>
+            <div class="disFelxRow juContSpEve foot">
+                <div class="yuan bigIcon"><span class="iconfont icon-zuoyijiarekaiqi"></span></div>
+                <div class="disFelxColu tem-control">
+                    <div class="disFelxRow juContSpBet tem-control-box tem-control-box1">
+                        <div>25</div>
+                        <div>25</div>
+                    </div>
+                    <div class="disFelxRow juContSpBet tem-control-box tem-control-box2">
+                        <div class="lineHeight"><span>24</span>℃</div>
+                        <div>
+                            <div>DUAL</div>
+                            <div>温度同步中</div>
+                        </div>
+                        <div class="lineHeight"><span>24</span>℃</div>
+                    </div>
+                    <div class="disFelxRow juContSpBet tem-control-box tem-control-box3">
+                        <div>23</div>
+                        <div>23</div>
+                    </div>
+                </div>
+                <div class="yuan bigIcon"><span class="iconfont icon-zuoyijiarekaiqi _rotateY180"></span></div>
+            </div>
+        </div>
+
+        <div class="air-box2">
+            <div class="disFelxRow air-box2-one">
+                <div>车外空气质量：78</div>
+            </div>
+            <div class="disFelxColu air-box2-two">
+                <div class="air-box2-two-text1">空气轻度污染</div>
+                <div class="air-box2-two-text2">PM2.5指数</div>
+                <div class="air-box2-two-text3">102</div>
+                <span class="iconfont icon-Ddingweidizuo"></span>
+                <div class="disFelxRow juContSpAro">
+                    <div class="iconTop" data-state="0"><span class="iconfont icon-yezi icon-yezi1" ></span></div>
+                    <div class="progress disFelxRow">
+                        <span class="progress-active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="iconTop" data-state="1"><span class="iconfont icon-yezi icon-yezi2" ></span></div>
+                </div>
+            </di>
+            <div class="disFelxRow air-box2-three">
+                <div class="air-box2-three-close active" data-state="1"><span class="iconfont icon-kaiguan"></span></div>
+                <div class="air-box2-three-auto" data-state="0">AUTO</div>
+            </div>
+            <div>滤网消耗率：12%</div>
+        </div>
+
+        <!-- 内容 end-->
+    </div>
+    <!-- 底部 -->
+    <nav id="home-footer" class="mui-bar mui-bar-tab ">
+        
+    </nav>
+    <!-- app -->
+    <script src="js/all.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            jtApp.airHtml();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<!-- <link rel="stylesheet" href="font/iconfont.css"> -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/expend.css" />
+
+	<script src="../_js/mui.min.js"></script>
+	<script src="../_js/TimelineMax.js"></script>
+	<script src="../_js/TweenMax.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+	<title></title>
+</head>
+
+<body>
+	<div class="expend">
+		<div class="flexRow justSpaBetween">
+			<span class="iconfont icon-guanbi"></span>
+			<span class="expendTab">
+				<span class="tabActive" data-id="0">消耗</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span data-id="1">长途旅行</span>
+			</span>
+			<span></span>
+		</div>
+		<div class="line"></div>
+		<div class="expendBox">
+			<div class="expendBox1">
+				<div id="main"></div>
+				<div class="flexRow justSpaAround">
+					<div class="expendBtn">
+						<ul class="flexRow">
+							<li>10km</li>
+							<li>25km</li>
+							<li>50km</li>
+						</ul>
+						<div class="active"></div>
+					</div>
+					<div class="expendBtn2">
+						<ul class="flexRow">
+							<li>瞬时里程</li>
+							<li>平均里程</li>
+						</ul>
+						<div class="active"></div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="expendBox2 dn">
+				<div class="expendBox2Text">
+					<div>开始行程</div>
+					<div>导航期间，沿途跟踪预测的能量消耗</div>
+				</div>
+			</div>
+		</div>
+
+		
+		
+	</div>
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+
+		var dom = document.getElementById("main");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+
+        data = [["05", 116], ["06", 129], ["07", 135], ["08", 86], ["09", 73], ["10", 85], ["11", 73], ["12", 68], ["13", 92], ["14", 130], ["15", 245], ["16", 139], ["17", 115], ["18", 111], ["19", 309], ["20", 206], ["21", 137], ["22", 128], ["23", 85], ["24", 94], ["25", 71], ["26", 106], ["27", 84], ["28", 93], ["29", 85], ["30", 73], ["01", 83], ["02", 125], ["03", 107], ["04", 82], ["05", 44], ["06", 72], ["07", 106], ["08", 107], ["09", 66], ["10", 91], ["11", 92], ["12", 113], ["13", 107], ["14", 131], ["15", 111], ["16", 64], ["17", 69], ["18", 88], ["19", 77], ["20", 83], ["21", 111], ["22", 57], ["23", 55], ["24", 60]];
+
+		// var data2 = [];
+		// for(let i=0;i<100;i++){
+		// 	data2.push([i,Math.floor(Math.random()*100)])
+		// }
+		// console.log(data2);
+		
+        var dateList = data.map(function (item) {
+			return item[0];
+        });
+        var valueList = data.map(function (item) {
+            return item[1];
+        });
+
+        option = {
+
+            title: [{
+                left: 'center',
+                text: '消耗'
+            }],
+           
+            xAxis: [{
+                data: dateList
+            }, {
+                gridIndex: 1
+            }],
+            yAxis: [{
+            }, {
+                gridIndex: 1
+            }],
+            grid: [{
+            }, {
+            }],
+            series: [{
+                type: 'line',
+                data: valueList
+            }, ]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+
+
+		// 切换tab
+		mui('.expendTab').on('tap','span',function(){
+			let _this = this;
+			let listLength = $('.expendTab').children.length
+
+			// console.log(_this,listLength);
+			
+			for(let i=0;i<listLength;i++){
+				dq('.expendTab').children[i].classList.remove('tabActive')
+				dq('.expendBox').children[i].classList.add('dn')
+			}
+			_this.classList.add('tabActive')
+			dq('.expendBox').children[_this.getAttribute('data-id')].classList.remove('dn')
+		})
+
+		// 2个，3个，4个 连体按钮的 切换
+		var tl1 = new TimelineMax({})
+		mui('.expendBtn ul,.expendBtn2 ul').on('tap','li',function(){
+			let _this = this;
+			// 获取当前元素的父级的子级个数
+			let liListLength = _this.parentNode.children.length;
+			let num = (_this.clientWidth * $(_this).index())+'px';
+			tl1.to($( _this.parentNode.parentNode.children[1]), 0.5, {left:num,ease: Power0.easeNone});
+		})
+
+		//关闭当前页面
+		mui('.expend').on('tap','.icon-guanbi',function(){
+			dq('.expend').classList.add('dn')
+		})
+	</script>
+</body>
+
+</html>

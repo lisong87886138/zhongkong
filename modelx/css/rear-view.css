@@ -1,0 +1,116 @@
+.rear-view-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.rear-view-page .mui-content {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.rear {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.rear .rear-view {
+  height: 40%;
+  width: 100%;
+}
+.rear .rear-view img {
+  width: 100%;
+}
+.rear .rear-img {
+  height: 60%;
+  width: 100%;
+  background: #2d313c;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.rear .rear-img .yinyue {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 8px 10px;
+  background: #63647c;
+  border-radius: 5px;
+  font-size: 0.2rem;
+}
+.rear .rear-img .rear-num {
+  margin: 38px 0;
+}
+.rear .rear-img .rear-in-car {
+  margin: 40px 0;
+}
+.rear .rear-img .rear-car {
+  width: 16%;
+}
+.rear .rear-img .rear-top-cm {
+  font-size: 0.3rem;
+}
+.rear .rear-img .rear-bottom-cm {
+  font-size: 0.3rem;
+}
+.rear .rear-img .top-s {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.rear .rear-img .s1 {
+  font-size: 0.7rem;
+  transform: rotate(-45deg);
+  margin-top: 28px;
+}
+.rear .rear-img .s2 {
+  font-size: 0.7rem;
+}
+.rear .rear-img .s3 {
+  font-size: 0.7rem;
+  transform: rotate(45deg);
+  margin-top: 28px;
+}
+.rear .rear-img .bottom-s {
+  display: flex;
+  flex-direction: row;
+  margin: -20px auto 0;
+}
+.rear .rear-img .s4 {
+  font-size: 0.7rem;
+  transform: rotate(-135deg);
+  margin-top: 0px;
+}
+.rear .rear-img .s5 {
+  font-size: 0.7rem;
+  transform: rotate(180deg);
+  margin-top: 29px;
+}
+.rear .rear-img .s6 {
+  font-size: 0.7rem;
+  transform: rotate(135deg);
+  margin-top: 0px;
+}
+.rear .rear-img .activeWhite {
+  color: #fff;
+}
+.rear .rear-img .activeWhite:before {
+  color: #fff;
+  -webkit-mask: linear-gradient(to top, #fff, transparent);
+}
+.rear .rear-img .activeRed {
+  color: #ff4023;
+}
+.rear .rear-img .activeRed:before {
+  color: #ff4023;
+  -webkit-mask: linear-gradient(to top, #ff4023, transparent);
+}
+.rear .rear-img .activeYellow {
+  color: #ee983e;
+}
+.rear .rear-img .activeYellow:before {
+  color: #ee983e;
+  -webkit-mask: linear-gradient(to top, #ee983e, transparent);
+}

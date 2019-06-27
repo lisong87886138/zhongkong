@@ -1,0 +1,44 @@
+[
+    {
+        "id":0,
+        "title":"高级驾驶辅助",
+        "iconFont":"icon-che",
+        "contont":["限速报警 车辆偏移 警示行人提示音 车辆起步启动..."]
+    },
+    {
+        "id":1,
+        "title":"空调",
+        "iconFont":"icon-che",
+        "contont":["AUTO模式风量 前除霜时开启后除霜 自动开启净化..."]
+    },
+    {
+        "id":2,
+        "title":"车灯",
+        "iconFont":"icon-che",
+        "contont":["迎宾灯 伴我回家 寻车反馈"]
+    },
+    {
+        "id":3,
+        "title":"门锁",
+        "iconFont":"icon-che",
+        "contont":["后备箱开启程度 行车自动落锁 熄火自动解锁 钥匙..."]
+    },
+    {
+        "id":4,
+        "title":"后视镜",
+        "iconFont":"icon-che",
+        "contont":["自动折叠/展开"]
+    },
+    {
+        "id":5,
+        "title":"方向盘",
+        "iconFont":"icon-che",
+        "contont":["[*]键自定义"]
+    },
+    {
+        "id":6,
+        "title":"仪表",
+        "iconFont":"icon-che",
+        "contont":["地图比例尺只能变化"]
+    }
+]

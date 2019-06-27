@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/radio-phone.css" />
+
+	<script src="../_js/TimelineMax.js"></script>
+	<script src="../_js/TweenMax.js"></script>
+	<script src="../_js/mui.min.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+	<title></title>
+</head>
+
+<body>
+	
+	<div class="radioBox">
+		<div class="boxTop">
+			<div class="colorEEE ">FM</div>
+			<div class="flexRow justSpaBetween boxTopTwo">
+				<div>103.7</div>
+				<div class="flexRow width50 justSpaAround" >
+					<div><span class="iconfont icon-wenjianguanli _rotateY180"></span></div>
+					<div><span class="iconfont icon-wenjianguanli"></span></div>
+					<div><span class="iconfont icon-shoucang"></span></div>
+					<div><span class="iconfont icon-Group"></span></div>
+				</div>
+			</div>
+			<div class="boxTopThree">
+				<span class="iconfont icon-xinhao"></span>
+			</div>
+		</div>
+		<div class="boxMiddle dn">
+			<div>收藏夹</div>
+		</div>
+		<div class="boxMiddleBig flexRow">
+			<div class="boxMiddleBigLeft">
+				<div data-id="1">收音机</div>
+				<div class="active" data-id="2">直接调谐</div>
+			</div>
+			<div class="boxMiddleBigRight">
+				<div class="boxMiddleBigRightBox1 dn">
+						123
+				</div>
+				<div class="boxMiddleBigRightBox2 flexColumn width50 margin0Auto" >
+					<div class="flexRow justSpaAround margin20-0">
+						<div></div>
+						<div></div>
+						<div><span class="iconfont icon-jiang-copy"></span></div>
+					</div>
+					<div class="flexRow justSpaAround margin20-0">
+						<div>1</div>
+						<div>2</div>
+						<div>3</div>
+					</div>
+					<div  class="flexRow justSpaAround margin20-0">
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+					</div>
+					<div  class="flexRow justSpaAround margin20-0">
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+					</div>
+					<div  class="flexRow justSpaAround margin20-0">
+						<div></div>
+						<div>0</div>
+						<div></div>
+					</div>
+					<div class="flexRow justSpaAround margin20-0">
+						<div></div>
+						<div class="btn">调谐</div>
+						<div></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="boxMiddleBig2 dn">
+			<div>电话</div>
+			<div class="boxMiddleBig2Box">
+				<div class="flexRow justSpaBetween">
+					<div><span class="iconfont icon-shouji1"></span></div>
+					<div><span class="iconfont icon-iconfont7"></span></div>
+				</div>
+				<div>连接电话</div>
+			</div>
+		</div>
+		<div class="boxBottom flexRow justSpaAround">
+			<div data-id="1">
+				<div><span class="iconfont icon-shouyinji"></span></div>
+				<div>收音机</div>
+			</div>
+			<div data-id="2">
+				<div><span class="iconfont icon-shouji1"></span></div>
+				<div>电话</div>
+			</div>
+		</div>
+
+		<div class="ovlayer dn">
+			<div class="flexRow justSpaBetween">
+				<span class="iconfont icon-guanbi"></span>
+				<span>蓝牙<span class="iconfont icon-lanya1"></span></span>
+				<span class="iconfont icon-i"></span>
+			</div>
+			<div class="ovlayerBox flexRow">
+				<div class="ovlayerBoxLeft">
+					<div class="flexRow justSpaBetween ovlayerName active" data-id="0">
+						<div>添加新设备</div>
+						<div class="flexRow">
+							<div><span class="iconfont icon-iconfont7"></span>&nbsp;&nbsp;</div>
+							<div><span class="iconfont icon-jiantou1"></span></div>
+						</div>
+					</div>
+					<div class="flexRow justSpaBetween ovlayerName" data-id="1">
+						<div>xxx的 IPhone</div>
+						<div class="flexRow">
+							<div><span class="iconfont icon-lanya1"></span>&nbsp;&nbsp;</div>
+							<div><span class="iconfont icon-jiantou1"></span></div>
+						</div>
+					</div>
+						
+				</div>
+				<div class="ovlayerBoxRight">
+					<div class="box0">
+						<div>在添加新设备之前，应确保设备已打开并可以被找到。</div>
+						<div class="btnSearch">开始搜索</div>
+					</div>
+					<div class="box1 dn">
+						<div>xxx的 IPhone 未连接</div>
+						<div class="phoneInformation">
+							<span class="iconfont icon-shouji1"></span>&nbsp;&nbsp;电话
+						</div>
+						<div class="phoneInformation">
+							<span class="iconfont icon-yinle"></span>&nbsp;&nbsp;音乐
+						</div>
+
+						<div class="flexRow justSpaAround btnBox">
+							<div class="delectThis">删除此设备</div>
+							<div class="connectThis">连接</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bluetoothOvlayer dn">
+			<div class="flexRow justSpaBetween">
+				<span class="iconfont icon-guanbi"></span>
+				<span>蓝牙诊断说明</span>
+				<span></span>
+			</div>
+			<div class="bluetoothOvlayerBox">
+				<div>	
+					针对任何蓝牙问题，请尝试以下步骤。在每一步后重试以查看问题是否已经解决。
+					<p>1.彻底关闭手机电源，然后再开启。尝试再次把手机连接到车辆。如果问题没有解决，请尝试第2步。</p>
+					<p>2.通过以下步骤来删除并重新建立车辆与手机之间的蓝牙配对：</p>
+					<ol>
+						<li>· 在蓝牙列表中“忽略”该手机。</li>
+						<li>· 在手机的蓝牙设置中“忽略”该车辆。</li>
+						<li>· 确保手机设为可被搜寻，然后在蓝牙窗口上点击“添加新设备”，重新进行配对。</li>
+						<li>· 却对完成之后，手机会自动连接到车辆。如果没有自动连接，请尝试从蓝牙列表中手动连接。</li>
+						<li>· 仅适用于安卓手机：在配对完成之后，手机上将会出现一个对话框，询问您是否想要同步联系人。请选择“不要再次询问”。否则，联系人可能无法正确同步。</li>
+						<li>· 注意：在某些手机上，这个对话框可能隐藏在通知栏中。</li>
+						<li>· 如果以上方法没有修复问题，请尝试第3步。</li>
+					</ol>
+				
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="voiceSetting dn">
+			<div class="voiceSettingTitle"><span class="iconfont icon-guanbi"></span>&nbsp;&nbsp;音频设置</div>
+			<div class="flexRow voiceSettingBox">
+				<div class="voiceSettingLeft">
+					<div class="active" data-id='0'>音调</div>
+					<div data-id='1'>平衡</div>
+					<div data-id='2'>选项</div>
+				</div>
+				<div class="voiceSettingRight">
+					<div class="voiceSettingRightBox1">
+						<div class="flexRow justSpaAround">
+							<div>0.0</div>
+							<div>0.0</div>
+							<div>0.0</div>
+							<div>0.0</div>
+							<div>0.0</div>
+						</div>
+						<div class="flexRow justSpaAround rangeBox">
+							<div class="_rotate90">
+								<input type="range" min="0" max="100">
+							</div>
+							<div class=" _rotate90">
+								<input type="range" min="0" max="100">
+							</div>
+							<div class=" _rotate90">
+								<input type="range" min="0" max="100">
+							</div>
+							<div class=" _rotate90">
+								<input type="range" min="0" max="100">
+							</div>
+							<div class=" _rotate90">
+								<input type="range" min="0" max="100">
+							</div>
+						</div>
+						<div class="flexRow justSpaAround">
+							<div>低音</div>
+							<div></div>
+							<div>中音</div>
+							<div></div>
+							<div>高音</div>
+						</div>
+						
+					</div>
+					<div class="voiceSettingRightBox2 dn">
+						<div>
+							<img src="../modelx/img/wish/weatherBox/car.png" alt="">
+						</div>
+					</div>
+					<div class="voiceSettingRightBox3 dn">
+						<div>沉浸式音效</div>
+						<div class="voiceSettingRightBox3Btn">
+							<ul class="flexRow">
+								<li>关</li>
+								<li>标准</li>
+								<li>高</li>
+							</ul>
+							<div class="active"></div>
+						</div>
+						<div class="line"></div>
+						<div>
+							<div class="flexRow margin200">
+								<div class="mui-switch mui-switch-mini mui-switch-blue mui-active">
+									<div class="mui-switch-handle"></div>
+								</div>
+								<div class="marginAuto0">允许手机控制</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+
+		//收音机左侧切换
+		mui('.boxMiddleBigLeft').on('tap','div',function(){
+			var _this = this
+			// console.log(_this.getAttribute('data-id'));
+
+			if(_this.getAttribute('data-id') == 1){
+				dq('.boxMiddleBigRightBox1').classList.remove('dn')
+				dq('.boxMiddleBigRightBox2').classList.add('dn')
+			}else{
+				dq('.boxMiddleBigRightBox1').classList.add('dn')
+				dq('.boxMiddleBigRightBox2').classList.remove('dn')
+			}
+
+			let arrLength = dq('.boxMiddleBigLeft').children.length
+			for(let i=0;i<arrLength;i++){
+				dq('.boxMiddleBigLeft').children[i].classList.remove('active')
+			}
+			_this.classList.add('active')
+			
+		})
+
+		// 底部tab 切换
+		mui('.boxBottom').on('tap','div',function(){
+			var _this = this
+			if(_this.getAttribute('data-id') == 1){
+				dq('.boxMiddleBig').classList.remove('dn')
+				dq('.boxMiddleBig2').classList.add('dn')
+			}else{
+				dq('.boxMiddleBig').classList.add('dn')
+				dq('.boxMiddleBig2').classList.remove('dn')
+			}
+		})
+
+
+		//滑动切换大小
+		var swiperState = 3
+		mui('.radioBox').on('swipedown','.boxTop',function(){
+			
+			switch(swiperState){
+				
+				case 1:
+					return
+				break;
+				case 2:
+					swiperState = 1
+					dq('.boxBottom').classList.add('dn')
+					dq('.boxMiddle').classList.add('dn')
+					dq('.radioBox').style.height = '13%'
+				break;
+				case 3:
+					swiperState = 2
+					dq('.boxMiddleBig,.boxMiddleBig2').classList.add('dn')
+					dq('.boxMiddle').classList.remove('dn')
+					dq('.radioBox').style.height = '70%'
+				break;
+			}
+
+			console.log('向下滑动了',swiperState);
+		})
+
+		mui('.radioBox').on('swipeup','.boxTop',function(){
+			
+			switch(swiperState){
+				case 0:
+					return
+				break;
+				case 1:
+					swiperState = 2
+					dq('.boxMiddle').classList.remove('dn')
+					dq('.radioBox').style.height = '70%'
+				break;
+				case 2:
+					swiperState = 3
+					dq('.boxMiddleBig').classList.remove('dn')
+					dq('.boxMiddle').classList.add('dn')
+					dq('.radioBox').style.height = '100%'
+				break;
+				case 3:
+					return
+				break;
+			}
+			console.log('向上滑动了',swiperState);
+		})
+
+		//切换浮层的设备信息
+		mui('.ovlayerBoxLeft').on('tap','.ovlayerName',function(){
+			let _this = this
+			// console.log(_this.getAttribute('data-id'));
+			let listLength =  dq('.ovlayerBoxLeft').children.length
+			for(let i=0;i<listLength;i++){
+				dq('.ovlayerBoxLeft').children[i].classList.remove('active')
+				dq('.ovlayerBoxRight').children[i].classList.add('dn')
+			}
+			_this.classList.add('active')
+			dq('.ovlayerBoxRight').children[_this.getAttribute('data-id')].classList.remove('dn')
+		})
+
+		//切换第一层的浮层
+		
+		mui('.boxMiddleBig2Box').on('tap','.icon-iconfont7',function(){
+			dq('.ovlayer').classList.remove('dn')
+		})
+		mui('.ovlayer').on('tap','.icon-guanbi',function(){
+			dq('.ovlayer').classList.add('dn')
+		})
+		// 切换 蓝牙浮层
+		mui('.ovlayer').on('tap','.icon-i',function(){
+			dq('.bluetoothOvlayer').classList.remove('dn')
+		})
+		mui('.bluetoothOvlayer').on('tap','.icon-guanbi',function(){
+			dq('.bluetoothOvlayer').classList.add('dn')
+		})
+
+
+		// 切换音频设置
+		mui('.voiceSettingLeft').on('tap','div',function(){
+			let _this = this;
+			let listLength = dq('.voiceSettingLeft').children.length
+			for(let i=0;i<listLength;i++){
+				dq('.voiceSettingLeft').children[i].classList.remove('active')
+				dq('.voiceSettingRight').children[i].classList.add('dn')
+			}
+			_this.classList.add('active')
+			dq('.voiceSettingRight').children[_this.getAttribute('data-id')].classList.remove('dn')
+		})
+
+
+		var tl1 = new TimelineMax({})
+		mui('.voiceSettingRightBox3Btn ul').on('tap','li',function(){
+			let _this = this;
+			// 获取当前元素的父级的子级个数
+			let liListLength = _this.parentNode.children.length;
+			let num = (_this.clientWidth * $(_this).index())+'px';
+			console.log(_this,liListLength,num);
+			
+			tl1.to($( _this.parentNode.parentNode.children[1]), 0.5, {left:num,ease: Power0.easeNone});
+		})
+
+		// 打开关闭 音量设置
+		mui('.boxTop').on('tap','.icon-Group',function(){
+			dq('.voiceSetting').classList.remove('dn')
+		})
+		mui('.voiceSetting').on('tap','.icon-guanbi',function(){
+			dq('.voiceSetting').classList.add('dn')
+		})
+	</script>
+</body>
+
+</html>

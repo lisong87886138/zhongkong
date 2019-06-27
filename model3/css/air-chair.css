@@ -1,0 +1,139 @@
+.air-chair {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  padding: 20px;
+}
+.air-chair .airTop {
+  width: 30%;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.air-chair .airTop div:nth-child(2) {
+  width: 100%;
+  background: #d4d4d4;
+  border-radius: 20px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 0;
+  position: relative;
+}
+.air-chair .airTop div:nth-child(2) li {
+  width: 33.33%;
+  z-index: 1;
+}
+.air-chair .airTop div:nth-child(2) .active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px #888888;
+  width: 33.33%;
+  height: 100%;
+  margin: 0;
+}
+.air-chair .airTop div:nth-child(3) {
+  font-size: 0.15rem;
+}
+.air-chair .airBox {
+  width: 100%;
+  height: 40%;
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+.air-chair .airBoxLeft {
+  width: 5%;
+  text-align: center;
+}
+.air-chair .airBoxLeft .airBoxLeftBox1 {
+  height: 50%;
+}
+.air-chair .airBoxLeft .airBoxLeftBox1 span {
+  line-height: 9;
+}
+.air-chair .airBoxLeft .airBoxLeftBox2 {
+  height: 50%;
+}
+.air-chair .airBoxLeft .airBoxLeftBox2 span {
+  line-height: 9;
+}
+.air-chair .airBoxLeft .active {
+  background: #DBDBDB;
+  border-radius: 10px;
+}
+.air-chair .airBoxRight {
+  width: 95%;
+  padding: 10px 20px;
+}
+.air-chair .airBoxRight .imgBtnBox {
+  width: 50px;
+  height: 50px;
+  background: #3E25FA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 7px 0;
+}
+.air-chair .airBoxRight .imgBtnBox .imgBtn {
+  margin: auto;
+  width: 64%;
+}
+.air-chair .airBoxRight .imgBtnBox span {
+  color: #fff;
+  text-align: center;
+  font-size: 0.25rem;
+}
+.air-chair .airBoxRight .imgBtnBox i {
+  font-size: 0.2rem;
+  color: #fff;
+  font-style: inherit;
+}
+.air-chair .airBoxRight .textBtn {
+  margin: auto 20px;
+  width: 1rem;
+  border-radius: 20px;
+  border: 1px solid #cacaca;
+  height: 60%;
+  line-height: 2;
+  text-align: center;
+}
+.air-chair .airBoxRight .tempControl {
+  margin: auto 20px;
+  width: 2rem;
+  background: #dadada;
+  height: 60%;
+  border-radius: 20px;
+  line-height: 2;
+}
+.air-chair .airBoxRight .xunhuan {
+  width: 50px;
+  border: 1px solid #cacaca;
+  border-radius: 50%;
+  height: 50px;
+  text-align: center;
+  line-height: 1.5;
+  margin: auto 20px;
+  display: flex;
+  align-items: center;
+}
+.air-chair .airBoxRight .imgBtn {
+  margin: auto;
+  width: 64%;
+  font-size: 0.3rem;
+}
+.air-chair .airBoxRight .airBoxRight2 .allClose {
+  border-radius: 20px;
+  background: #cacaca;
+  width: 20%;
+  text-align: center;
+  padding: 10px 0;
+}

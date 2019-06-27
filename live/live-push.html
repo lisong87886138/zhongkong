@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet"/>
+	<!-- app css js -->
+	<link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8"/>
+	<script type="text/javascript" src="js/common.js"></script>
+	<!-- app css js -->
+
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style>
+        input {
+			width:70%;
+			font-size: 16px;
+			padding: .2em .2em;
+			border: 1px solid #00B100;
+			-webkit-user-select: text;
+		}
+		button {
+			width:20%;
+			margin:6px 0 6px 6px;
+			font-size: 16px;
+			color: #FFF;
+			background-color: #00CC00;
+			border: 1px solid #00B100;
+			padding: .2em 0em;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+    </style>
+</head>
+<body id="">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="stopLive()"></a>
+    <br/>
+	<div id="pusher" style="width:100%;height:400px;background-color:#000000;"></div>
+	<br/>
+	<div style="text-align:center; margin:auto;">
+		<input id="path" type="text" value="rtmp://172.16.0.13/hls/12345678" placeholder="请输入直播服务器地址(rtmp)"/>
+		<button id="pp" onclick="ppPusher()">开始</button>
+	</div>
+	<div class="button" onclick="switchCamera()">切换摄像头</div>
+    <script type="text/javascript">
+    	var pusher = null;
+		var bstart = false;
+		// H5 plus事件处理
+		function plusReady(){
+			// 创建直播推流控件
+			pusher = new plus.video.LivePusher('pusher',{
+				url:'rtmp://172.16.0.13/hls/12345678',
+				mode:'HD',
+				beauty:1,
+				whiteness:1
+			});
+			// 监听状态变化事件
+			pusher.addEventListener('statechange', function(e){
+				console.log('statechange: '+JSON.stringify(e));
+			}, false);
+		}
+		document.addEventListener('plusready', plusReady, false);
+		// 开始/停止推流
+		function ppPusher() {
+			if(bstart) {
+				pusher.stop();
+				bstart=false;
+			}else {
+				var path = document.getElementById('path').value;
+				if(path && path.length>0) {
+					pusher.setOptions({url:path});
+					pusher.start();
+					bstart=true
+				}else {
+					plus.nativeUI.toast('请输入直播服务器地址');
+				}
+			}
+			var pp = document.getElementById('pp');
+			pp.innerText = bstart?'停止':'开始';
+		}
+		// 切换摄像头
+		function switchCamera() {
+			pusher.switchCamera();
+		}
+
+		// 退出关闭 推流
+		function stopLive(){
+			pusher.stop();
+		}
+    </script>
+</body>
+</html>

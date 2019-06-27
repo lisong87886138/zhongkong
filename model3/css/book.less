@@ -1,0 +1,124 @@
+
+
+.book {
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+    // margin-bottom: 2rem;
+    height: 96%;
+}
+
+.title {
+    text-align: center;
+    font-size: 0.2rem;
+}
+
+.book-main1 {
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.2rem;
+    position: relative;
+
+    .more {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        background: #F7F7F7;
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+        border-right: 1px solid #000;
+        border-radius: 8px 8px 0 0;
+        color: #C4C4C4;
+
+        span {
+            font-size: 0.2rem;
+            margin-top: 5px;
+        }
+    }
+
+    .oneTitle {
+        width: 50%;
+        overflow: scroll;
+        
+
+        ul {
+            border-right: 1px solid #eee;
+            height: 100%;
+        }
+
+        li {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.2rem;
+            border-bottom: 1px solid #eee;
+
+        }
+        li:last-child{
+            // border-bottom: none;
+        }
+        li span {
+            font-size: 0.3rem;
+            color: rgb(211, 211, 211);
+        }
+    }
+
+    .twoTitle {
+        width: 50%;
+        overflow: scroll;
+        font-size: 0.2rem;
+
+        ul {
+        }
+
+        li {
+            padding: 20px;
+            font-size: 0.2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+    }
+}
+
+
+
+.book-main2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 78%;
+    margin-top: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: scroll;
+    // position: absolute;
+    // display: none;
+
+
+    .book-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        background: #eee;
+        padding: 20px;
+
+        .iconfont {
+            font-size: 0.3rem;
+        }
+    }
+
+
+    .book-text {
+        padding: 20px 30px;
+    }
+}

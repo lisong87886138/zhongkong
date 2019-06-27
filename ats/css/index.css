@@ -1,0 +1,406 @@
+/*
+    颜色色值
+    #83ff70 绿色
+    #858688 灰色
+    #dc2f1d 红色
+    #6281c5 蓝色
+    #e7e930 黄色
+    #876734 棕色
+    #ced8dc 灰白
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+* ul,
+* li,
+* ol {
+  list-style: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+header {
+  font-size: 0.2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+header h1 {
+  color: #83ff70;
+}
+header .control-box {
+  margin: 10px 0;
+}
+header .control-1 {
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+header ._yuan {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #858688;
+  display: block;
+  margin: 7px auto;
+}
+header .bgColorGreen {
+  background-color: #83ff70;
+}
+header .contact-box {
+  border: 1px solid #fff;
+  width: 30%;
+  margin: 0 auto;
+  padding: 5px 20px;
+}
+footer {
+  width: 49%;
+  margin: 10px auto;
+  font-size: 0.1rem;
+  border: 1px solid #fff;
+  text-align: center;
+}
+footer ._yuan {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ced8dc;
+  display: block;
+  margin: 7px auto;
+}
+footer .control-1 {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+footer ._kuang {
+  border: 1px solid #bfcc6f;
+}
+.content {
+  font-size: 0;
+  overflow: hidden;
+  width: 98%;
+  margin: 0 auto;
+  padding: 55px 0;
+  -webkit-text-size-adjust: none;
+  position: relative;
+}
+.content .carBox {
+  position: absolute;
+  top: -52px;
+  left: 5px;
+  width: 80px;
+}
+.content .carBox2 {
+  position: absolute;
+  top: 52px;
+  left: 5px;
+  width: 80px;
+}
+.content .car1 {
+  background: red;
+  color: #fff;
+  font-size: 0.1rem;
+  display: inline-block;
+}
+.content .car2 {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  font-size: 0.1rem;
+}
+.content .arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 5px solid #e7e930;
+  display: inline-block;
+  vertical-align: top;
+}
+.content .arrow-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 5px solid yellow;
+  vertical-align: top;
+}
+.content .line {
+  border-left: 1px solid #fff;
+  width: 1px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: -3px;
+}
+.content .lineBig {
+  width: 100%;
+  background: #6281c5;
+  display: inline-block;
+  height: 5px;
+}
+.content .lineBig50 {
+  width: 50%;
+  background: #6281c5;
+  display: inline-block;
+  height: 5px;
+}
+.content i.text {
+  position: absolute;
+  top: 10px;
+  left: 20%;
+  font-size: 0.1rem;
+}
+.content ._block {
+  position: relative;
+  display: inline-block;
+  width: 7.5%;
+  margin: 0;
+  padding: 0;
+}
+.content ._dengTop {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: red;
+  color: #000;
+  font-size: 0.2rem;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+.content ._dengBottom {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  background: red;
+  color: #000;
+  font-size: 0.2rem;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+.content i._dengTextTop {
+  position: absolute;
+  top: -30px;
+  right: -24px;
+  font-size: 0.1rem;
+}
+.content i._dengTextBottom {
+  position: absolute;
+  top: 30px;
+  left: -14px;
+  font-size: 0.1rem;
+}
+.content .xie-box {
+  position: relative;
+  padding-bottom: 84px;
+}
+.content .lineVertical {
+  width: 5px;
+  height: 138px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -31px;
+  left: 41%;
+  transform: rotate(-41deg);
+  z-index: 1;
+}
+.content .lineVertical2 {
+  width: 5px;
+  height: 130px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -25px;
+  left: 65.4%;
+  transform: rotate(34deg);
+  z-index: 1;
+}
+.content .lineVertical3 {
+  width: 5px;
+  height: 139px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -30px;
+  left: 41%;
+  transform: rotate(40deg);
+  z-index: 1;
+}
+.content .lineVertical4 {
+  width: 5px;
+  height: 130px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -28px;
+  left: 65.5%;
+  transform: rotate(-36deg);
+  z-index: 1;
+}
+.content .lineVertical5 {
+  width: 5px;
+  height: 142px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -32px;
+  left: 56.8%;
+  transform: rotate(-40deg);
+  z-index: 1;
+}
+.content .lineVertical6 {
+  width: 5px;
+  height: 143px;
+  display: inline-block;
+  background: #6281c5;
+  position: absolute;
+  top: -33px;
+  left: 56.7%;
+  transform: rotate(41deg);
+  z-index: 1;
+}
+.content ._point {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #83ff70;
+  border-radius: 50%;
+}
+.content ._pointTextLeft {
+  position: absolute;
+  top: -17px;
+  left: 2%;
+  width: 34px;
+  height: 15px;
+  color: #83ff70;
+  font-size: 0.1rem;
+}
+.content ._pointRight {
+  position: absolute;
+  top: 0;
+  right: 14%;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #83ff70;
+  border-radius: 50%;
+}
+.content ._pointTextRight {
+  position: absolute;
+  top: -17px;
+  right: 21%;
+  width: 34px;
+  height: 15px;
+  color: #83ff70;
+  font-size: 0.1rem;
+}
+.content .state-luban {
+  position: absolute;
+  width: 7.5%;
+  text-align: center;
+  word-break: keep-all;
+  top: 23%;
+  left: 23%;
+}
+.content .state-luban2 {
+  position: absolute;
+  width: 7.5%;
+  text-align: center;
+  word-break: keep-all;
+  top: 23%;
+  left: 75.9%;
+}
+.content .line2 {
+  width: 100%;
+  height: 6px;
+  background: #83ff70;
+  margin: 10px 0;
+}
+.content .kuai {
+  width: 100%;
+  height: 20px;
+  background: #ccc;
+  margin: 10px 0;
+}
+.content .stateText {
+  font-size: 0.2rem;
+  color: #83ff70;
+}
+.content .colorGreen {
+  color: #83ff70;
+}
+.content .bgColorGreen {
+  background-color: #83ff70;
+}
+.content .bgColorRed {
+  background-color: #dc2f1d;
+}
+.content .bgColorWhite {
+  background-color: white;
+}
+.content .content-xie {
+  position: relative;
+  width: 100%;
+}
+.content .width15 {
+  margin-left: 38%;
+}
+.content .width375 {
+  width: 3.75%;
+}
+.content .width015 {
+  width: 15%;
+}
+.content .width010 {
+  width: 10%;
+}
+@media screen and (min-width: 1900px) {
+  .content .lineVertical {
+    transform: rotate(-48deg);
+    height: 152px;
+    top: -38px;
+  }
+  .content .lineVertical2 {
+    transform: rotate(40deg);
+    height: 139px;
+    top: -31px;
+    left: 65.2%;
+  }
+  .content .lineVertical3 {
+    height: 158px;
+    top: -39px;
+    left: 41%;
+    transform: rotate(48deg);
+  }
+  .content .lineVertical4 {
+    height: 138px;
+    top: -32px;
+    left: 65.4%;
+    transform: rotate(-42deg);
+  }
+  .content .lineVertical5 {
+    height: 156px;
+    top: -39px;
+    transform: rotate(-47deg);
+  }
+  .content .lineVertical6 {
+    height: 156px;
+    top: -39px;
+    transform: rotate(48deg);
+  }
+}

@@ -1,0 +1,260 @@
+body,html{
+    background: rgb(51, 51, 51);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 26px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// icon 默认颜色 和切换 颜色
+.iconColorGreen{
+    opacity: 1;
+    color:#3de938;
+}
+.iconColorRed{
+    opacity: 1;
+    color:#ef0701;
+}
+.iconColorYellow{
+    opacity: 1;
+    color:#f9e44c;
+}
+.iconColorBlue{
+    opacity: 1;
+    color:#0d569f;
+}
+.dn{
+    display: none;
+}
+
+// 返回
+.mui-action-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.icon-box1{
+    position: absolute;
+    top:20px;
+    left: 30%;
+}
+.icon-box1 span{
+    margin: 0 5px;
+}
+.icon-box1 span:nth-child(6){
+    font-size: 34px;
+}
+.icon-box2{
+    position: absolute;
+    top:35%;
+    left: 4%;
+    text-align: center;
+    opacity: 0.5;
+}
+.icon-box2 span{
+    display: block;
+    margin: 10px 0;
+}
+.icon-box2 span:nth-child(3){
+    font-size: 38px;
+    // margin:0;
+}
+.icon-box2 span:nth-child(4){
+    font-size: 38px;
+    // margin: 0;
+}
+.icon-box3{
+    opacity: 0.5;
+    position: absolute;
+    top:35%;
+    right: 4%;
+    text-align: center;
+}
+.icon-box3 span{
+    display: block;
+    margin: 10px 0;
+}
+.icon-box3 span:nth-child(1){
+    font-size: 34px;
+    // margin:0;
+}
+.icon-box3 span:nth-child(2){
+    font-size: 34px;
+    // margin:0;
+}
+.left-zhuanxiang{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    font-size: 60px;
+    opacity: 0.5;
+}
+.right-zhuanxiang{
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    font-size: 60px;
+    opacity: 0.5;
+}
+.PRND{
+    position: absolute;
+    bottom: 18%;
+    left: 46.5%;
+}
+.dianliang {
+    position: absolute;
+    bottom: 13%;
+    left: 50%;
+}
+.kilometre{
+    position: absolute;
+    bottom: 14%;
+    right: 10%;
+    font-size: 22px;
+}
+.progress-bar-left{
+   position: absolute;
+   bottom: 14%;
+   left: 30%;
+   line-height: 26px;
+}
+.progress-bar-left span{
+    width: 14px;
+    height: 10px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 -2px;
+}
+.progress-bar-left span:nth-child(1){
+    height: 5px;
+    transform:skew(30deg);
+    opacity: 0.3;
+}
+.progress-bar-left span:nth-child(2){
+    height: 6px;
+    transform:skew(30deg);
+    opacity: 0.4;
+}
+.progress-bar-left span:nth-child(3){
+    height: 7px;
+    transform:skew(30deg);
+    opacity: 0.5;
+}
+.progress-bar-left span:nth-child(4){
+    height: 8px;
+    transform:skew(30deg);
+    opacity: 0.6;
+}
+.progress-bar-left span:nth-child(5){
+    height: 9px;
+    transform:skew(30deg);
+    opacity: 0.7;
+}
+.progress-bar-left span:nth-child(6){
+    height: 10px;
+    transform:skew(30deg);
+    opacity: 0.8;
+}
+.progress-bar-left span:nth-child(7){
+    height: 11px;
+    transform:skew(30deg);
+    opacity: 0.9;
+}
+.progress-bar-left span:nth-child(8){
+    height: 12px;
+    transform:skew(30deg);
+}
+
+.progress-bar-right{
+    position: absolute;
+    bottom: 14%;
+    right: 28%;
+    line-height: 26px;
+ }
+ .progress-bar-right span{
+     width: 14px;
+     height: 10px;
+     background: #fff;
+     display: inline-block;
+     margin: 0 -2px;
+ }
+ .progress-bar-right span:nth-child(8){
+     height: 5px;
+     transform:skew(-30deg);
+     opacity: 0.3;
+ }
+ .progress-bar-right span:nth-child(7){
+     height: 6px;
+     transform:skew(-30deg);
+     opacity: 0.4;
+ }
+ .progress-bar-right span:nth-child(6){
+     height: 7px;
+     transform:skew(-30deg);
+     opacity: 0.5;
+ }
+ .progress-bar-right span:nth-child(5){
+     height: 8px;
+     transform:skew(-30deg);
+     opacity: 0.6;
+ }
+ .progress-bar-right span:nth-child(4){
+     height: 9px;
+     transform:skew(-30deg);
+     opacity: 0.7;
+ }
+ .progress-bar-right span:nth-child(3){
+     height: 10px;
+     transform:skew(-30deg);
+     opacity: 0.8;
+ }
+ .progress-bar-right span:nth-child(2){
+     height: 11px;
+     transform:skew(-30deg);
+     opacity: 0.9;
+ }
+ .progress-bar-right span:nth-child(1){
+     height: 12px;
+     transform:skew(-30deg);
+ }
+
+#main{
+    width: 100%;
+    height: 100%;
+}

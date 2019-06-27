@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title></title>
+  <script src="../_js/mui.min.js"></script>
+  <script src="../_js/rem.js"></script>
+  <link href="../_css/mui.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1087136_zby7xnty6q.css">
+  <link rel="stylesheet" href="../_css/swiper.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <script src="../_js/swiper.min.js"></script>
+  <script src="../_js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    mui.init();
+  </script>
+</head>
+
+<body id="home-page">
+  <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
+  <div class="resveBox disFlexRow">
+    <!-- 左侧 -->
+    <div class="leftBox disFlexColumn textCenter">
+      <span class="iconfont icon-shipin"></span>
+      <span class="iconfont icon-yinliang"></span>
+    </div>
+    <!-- 左侧 -->
+    <!-- 中间内容 -->
+    <div class="centerBox disFlexRow">
+      <div class="leftCenter">
+       
+            <video id="video" ref="video"></video>
+            <canvas id="canvas" ref="canvas"></canvas>
+            <div class="text">请检查车辆四周安全</div>
+
+      </div>
+      <div class="rightCenter">
+        <div class="centerCenter">
+          <img src="img/car.png" alt="">
+          
+        </div>
+
+      </div>
+    </div>
+    <!-- 中间内容 -->
+    <!-- 右侧 -->
+    <div class="rightBox disFlexColumn textCenter">
+      <span class="iconfont icon-yuyin"></span>
+      <span class="iconfont icon-liangdu"></span>
+    </div>
+    <!-- 右侧 -->
+  </div>
+
+  <script src="js/all.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      jtApp.resveHtml();
+    }
+		var aVideo=document.getElementById('video');
+		var aCanvas=document.getElementById('canvas');
+		var ctx=aCanvas.getContext('2d');
+			 
+		var con = {
+			video:true,
+			audio:false
+		}
+		var prom = navigator.mediaDevices.getUserMedia(con)
+		prom.then(function(MediaStream){
+			video.srcObject = MediaStream
+			video.play()
+		})
+
+  </script>
+</body>
+
+</html>

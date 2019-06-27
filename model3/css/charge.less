@@ -1,0 +1,161 @@
+.charge {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .charge-main {
+        width: 100%;
+        // position: fixed;
+        height: 100%;
+        bottom: 0.37rem;
+        left: 2%;
+        display: flex;
+        flex-direction: column;
+        z-index: 99;
+        background:#fff;
+        z-index: 3;
+
+        .charge-box1 {
+            height: 87%;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            background: #f4f4f4;
+
+            .charge-head {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .icon-guanbi {
+                    margin: auto 0;
+                }
+
+                .charge-head-text {
+                    width: 2rem;
+                    background: #cbd4dd;
+                    border-radius: 10px;
+                    padding: 10px 0;
+                    line-height: 0.2rem;
+                    text-align: center;
+                    font-size: 0.2rem;
+                }
+            }
+
+            .charge-ready {
+                font-size: 0.3rem;
+                font-weight: 600;
+                padding-left: 0.5rem;
+                margin: 15px 0;
+            }
+
+            .charge-kilometre {
+                font-size: 0.3rem;
+                font-weight: 600;
+                text-align: center;
+                margin: 15px 0;
+            }
+
+            .charge-car {
+                position: relative;
+                margin: 7% auto;
+
+                .charge-amount {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1.6rem;
+                    width: 0rem;
+                    height: 0.72rem;
+                    background: rgb(236, 52, 52);
+                    animation: changeWidth 2s linear infinite;
+                }
+
+                @keyframes changeWidth {
+                    0% {
+                        width: 0%;
+                    }
+
+                    100% {
+                        width: 2.3rem;
+                    }
+                }
+
+                .icon-tongsuoguan,
+                .icon-tongsuokai {
+                    position: absolute;
+                    top: 1.2rem;
+                    right: 0.34rem;
+                    font-size: 0.3rem;
+                }
+            }
+
+            .charge-inbtn {
+                display: flex;
+                justify-content: center;
+                margin: auto 0;
+
+                .charge-btn {
+                    font-size: 0.2rem;
+                    font-weight: 600;
+                    text-align: center;
+                    padding: 10px 20px;
+                    border: 1px solid #999896;
+                    border-radius: 15px;
+                    width: 2rem;
+                }
+            }
+
+        }
+
+        .charge-box2 {
+            background: #fff;
+            padding: 15px;
+
+            .charge-power {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .charge-inbtn {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .charge-ele {
+                    display: flex;
+                    flex-direction: row;
+                    background: #e9e9e9;
+                    margin: auto 0;
+                    border-radius: 15px;
+                    padding: 10px 15px;
+
+                    .charge-ele-num {
+                        padding: 0 40px;
+                    }
+                }
+
+                .charge-time {
+                    display: flex;
+                    flex-direction: row;
+
+                    .mui-switch {
+                        margin: 5px 10px 0 0;
+                    }
+                }
+
+                .charge-sup {
+                    font-size: 0.15rem;
+                    color: #eee;
+                    margin: auto 0;
+                }
+            }
+
+
+        }
+
+    }
+
+}

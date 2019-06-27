@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet"/>
+	
+	<!-- app css js -->
+	<link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8"/>
+	<script type="text/javascript" src="js/common.js"></script>
+	<!-- app css js -->
+	
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+	</script>
+	<style>
+		input {
+			width:70%;
+			font-size: 16px;
+			padding: .2em .2em;
+			border: 1px solid #00B100;
+			-webkit-user-select: text;
+		}
+		button {
+			width:20%;
+			margin:6px 0 6px 6px;
+			font-size: 16px;
+			color: #FFF;
+			background-color: #00CC00;
+			border: 1px solid #00B100;
+			padding: .2em 0em;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+	</style>
+
+</head>
+<body id="">
+	
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="stop()"></a> 
+	<br>
+	<div id="video" style="width:100%;height:400px;background-color:#000000;"></div>
+		<br/>
+		<div style="text-align:center; margin:auto;">
+			<!-- <input id="path1" type="text" value="" placeholder="请输入视频地址，支持mp4/flv格式"/>
+			<button onclick="playVideo1()">播放</button> -->
+			<br/>
+			<input id="path2" type="text" value="http://172.16.0.13/hls/12345678.m3u8" placeholder="请输入视频地址，支持rtmp直播"/>
+			<button onclick="playVideo2()">播放直播</button>
+		</div>
+		
+		<!-- 弹幕 -->
+		<input id="danmu" type="text" value="" placeholder="请输入弹幕~~">
+		<div class="button" onclick="danmuSend()">发送弹幕</div>
+		<!-- 弹幕 -->
+
+		<div id="pp" class="button" onclick="ppVideo()">播放</div>
+		<div class="button" onclick="fullscreenVideo()">全屏</div>
+		<div class="button" onclick="createSubview()">控件上内容显示/隐藏</div>
+	<script>
+		var video = null;
+		var playing = false;
+		var danmuList= [
+			{
+				text: '第 1s 出现的弹幕',
+				color: '#ff0000',
+				time: 1
+			},
+			{
+				text: '第 3s 出现的弹幕',
+				color: '#ff00ff',
+				time: 3
+			}
+		]
+		// H5 plus事件处理
+		function plusReady(){
+			// 创建视频播放控件
+			video = new plus.video.VideoPlayer('video',{
+				src:'http://172.16.0.13/hls/12345678.m3u8',
+				"danmu-list":danmuList,
+				"danmu-btn":true,
+				"enable-danmu":true
+			});
+			video.addEventListener('play', function(){
+				updatePlaying(true);
+			}, false);
+			video.addEventListener('pause', function(){
+				updatePlaying(false);
+			}, false);
+		}
+		document.addEventListener('plusready', plusReady, false);
+		// 播放
+		function playVideo1() {
+			var path = document.getElementById('path1').value;
+			if(path&&path.length>0) {
+				video.setOptions({src:path});
+				video.play();
+			}
+		}
+		function playVideo2() {
+			var path = document.getElementById('path2').value;
+			if(path&&path.length>0) {
+				video.setOptions({src:path});
+				video.play();
+			}
+		}
+		
+		// 更新为播放状态
+		function updatePlaying(play) {
+			playing = play;
+			document.getElementById('pp').innerText = playing?'暂停':'播放';
+		}
+		// 播放/暂停
+		function ppVideo() {
+			playing?video.pause():video.play();
+		}
+		// 全屏
+		function fullscreenVideo() {
+			video.requestFullScreen(-90);
+		}
+		// 创建子创建覆盖在视频控件上
+		var wsub = null;
+		function createSubview(){
+			if(!wsub) {
+				var topoffset = document.getElementById('video').offsetTop;
+				wsub=plus.webview.create('live-ovlay.html','sub',{top:topoffset,height:'300px',position:'static',scrollIndicator:'none',background:'transparent'});
+				plus.webview.currentWebview().append(wsub);
+			}
+			wsub.isVisible()?wsub.hide():wsub.show();
+		}
+
+		// 弹幕
+		function danmuSend(event){
+			var text = document.getElementById("danmu").value
+			video.sendDanmu({text:text,color:getRandomColor(),time:1});
+		}
+		// 随机颜色
+		function getRandomColor () {
+			const rgb = []
+			for (let i = 0 ; i < 3; ++i){
+				let color = Math.floor(Math.random() * 256).toString(16)
+				color = color.length == 1 ? '0' + color : color
+				rgb.push(color)
+			}
+			return '#' + rgb.join('')
+		}
+		// 退出关闭 
+		function stop(){
+			video.stop();
+		}
+		
+	</script>
+	
+</body>
+</html>

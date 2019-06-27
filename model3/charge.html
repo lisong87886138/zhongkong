@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<!-- <link rel="stylesheet" href="font/iconfont.css"> -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/charge.css" />
+
+	<script src="../_js/mui.min.js"></script>
+	<title></title>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="charge">
+		<div class="charge-main">
+			<div class="charge-box1">
+				<div class="charge-head">
+					<span class="iconfont icon-guanbi"></span>
+					<div class="charge-head-text" onclick="onOpenTap('open')">解锁充电接口</div>
+				</div>
+				<div class="charge-ready">
+					准备充电
+				</div>
+				<div class="charge-kilometre">
+					396km
+				</div>
+				<div class="charge-car">
+					<div class="charge-amount"></div>
+					<span class="iconfont icon-tongsuoguan" onclick="onOpenTap('close')"></span>
+					<img src="../modelx/images/charge-car_03.png" alt="">
+				</div>
+				<div class="charge-inbtn">
+					<div class="charge-btn">设置限制</div>
+				</div>
+			</div>
+			<div class="charge-box2">
+				<div class="charge-power">
+					<div>
+						<span class="iconfont icon-locatefuben"></span>
+						充电电流
+					</div>
+					<div>
+						<span class="iconfont icon-locatefuben"></span>
+						定时充电
+					</div>
+					<div>
+						超级充电中
+					</div>
+				</div>
+
+				<div class="charge-inbtn">
+					<div class="charge-ele">
+						<span class="iconfont icon-jianhao" onclick="temperature('charge-e','reduce')"></span>
+						<div class="charge-ele-num"><span class="charge-e">24</span>A</div>
+						<span class="iconfont icon-iconfont7" onclick="temperature('charge-e','add')"></span>
+					</div>
+
+					<div class="charge-time">
+						<div class="mui-switch mui-switch-mini">
+							<div class="mui-switch-handle"></div>
+						</div>
+						<div class="charge-ele textActive">
+							<span class="iconfont icon-jianhao" onclick="chargeTimeTap('reduce',10)"></span>
+							<div class="charge-ele-num"><span class="charge-timeS">0</span>:<span
+									class="charge-timeM">0</span></div>
+							<span class="iconfont icon-iconfont7" onclick="chargeTimeTap('add',10)"></span>
+						</div>
+					</div>
+
+					<div class="charge-sup">最近未进行超级充电</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+		// 增加温度, 降低温度封装方法
+		function temperature(className, state) {
+			// console.log(state)
+			var temp = document.getElementsByClassName(className);
+			var num = parseFloat(temp[0].innerHTML);
+			if (state == "add") {
+				num++;
+			} else {
+				num--;
+			}
+			temp[0].innerText = num;
+		}
+
+		// 点击 解锁充电接口
+		function onOpenTap(state) {
+			if (state == 'open') {
+				dq('.charge-car .iconfont').classList.remove('icon-tongsuoguan')
+				dq('.charge-car .iconfont').classList.add('icon-tongsuokai')
+			} else {
+				dq('.charge-car .iconfont').classList.remove('icon-tongsuokai')
+				dq('.charge-car .iconfont').classList.add('icon-tongsuoguan')
+			}
+		}
+
+		// 定时充电 切换按钮 允许和取消点击
+		dq(".mui-switch").addEventListener("toggle", function (event) {
+			if (event.detail.isActive) {
+				// console.log("你启动了开关");
+				dq('.charge-time .charge-ele').classList.remove("textActive")
+				dq(".charge-time .mui-switch").setAttribute('data-switch', "0")
+			} else {
+				//console.log("你关闭了开关");
+				dq('.charge-time .charge-ele').classList.add("textActive")
+				dq(".charge-time .mui-switch").setAttribute('data-switch', "1")
+			}
+		})
+		// 定时充电
+		function chargeTimeTap(state, setTime) {
+			var numS = dq('.charge-timeS').innerHTML
+			var numM = dq('.charge-timeM').innerHTML
+			var switchNum = dq(".charge-time .mui-switch").getAttribute("data-switch")
+			if (switchNum == 1) {
+				return;
+			}
+			if (state == "add") {
+				if (numM == (60 - setTime)) {
+					numM = 0
+					numS == 23 ? numS = 0 : numS++
+				} else {
+					numM = Number(numM) + setTime
+				}
+			} else {
+				if (numM <= 0) {
+					numM = (60 - setTime)
+					numS == 0 ? numS = 23 : numS--
+				} else {
+					numM = Number(numM) - setTime
+				}
+			}
+			dq('.charge-timeS').innerHTML = numS
+			dq('.charge-timeM').innerHTML = numM
+		}
+
+		//关闭当前页面
+		mui('.charge').on('tap','.icon-guanbi',function(){
+			// video.pause()
+			dq('.charge').classList.add('dn')
+		})
+	</script>
+</body>
+
+</html>

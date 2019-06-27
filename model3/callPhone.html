@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<!-- <link rel="stylesheet" href="font/iconfont.css"> -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/callPhone.css" />
+
+	<script src="../_js/mui.min.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<title></title>
+</head>
+
+<body>
+	<div class="callPhone">
+		<div class="flexRow justSpaAround callPhoneTop">
+			<div>
+				<span class="iconfont icon-guanbi"></span>
+			</div>
+			<div class="flexRow">
+				<span class="iconfont icon-shijian"></span>
+				<div> &nbsp;&nbsp;最近</div>
+			</div>
+			<div class="flexRow">
+				<span class="iconfont icon-sousuoyemiantubiao"></span>
+				<div> &nbsp;&nbsp;联系人</div>
+			</div>
+			<div class="flexRow">
+				<span class="iconfont icon-bohao"></span>
+				<div> &nbsp;&nbsp;拨号键盘</div>
+			</div>
+		</div>
+		<div class="callPhoneBox">
+			<div>手机未连接</div>
+			<div>通过蓝牙连接手机</div>
+			<div>连接</div>
+		</div>
+	</div>
+	<script>
+
+		//关闭当前页面
+		mui('.callPhone').on('tap','.icon-guanbi',function(){
+			// video.pause()
+			dq('.callPhone').classList.add('dn')
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+.colorRed {
+  color: red;
+}
+.colorEEE {
+  color: #eee;
+}
+.color000 {
+  color: #000;
+}
+.colorGreen {
+  color: #51e3b2;
+}
+.borderBottom {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a29f98;
+}
+.textAlignCenter {
+  text-align: center;
+}
+.left-box {
+  width: 24%;
+  height: 100%;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+}
+.left-box .pilot-light .iconfont {
+  font-size: 0.4rem;
+}
+.left-box .gear {
+  text-align: center;
+  font-size: 1rem;
+  padding: 50px 0;
+}
+.left-box .icon-dianchi1 {
+  font-size: 0.3rem;
+  vertical-align: middle;
+}
+.left-box .car {
+  height: 5rem;
+}
+.left-box .car .stop {
+  position: relative;
+  padding: 20px 0;
+}
+.left-box .car .stop .speedLimit {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  border: 2px solid #ff0000;
+  background: #ebf0eb;
+}
+.left-box .car .stop .carImg {
+  width: 1.3rem;
+  margin: 20px 0;
+  vertical-align: -28px;
+}
+.left-box .car .stop .openBtn {
+  padding: 10px 30px;
+  margin: 0 auto;
+  background: #ebf0eb;
+  text-align: center;
+  border-radius: 30px;
+}
+.left-box .iconBtn {
+  margin: 20px 0;
+}
+.left-box .iconBtn .iconfont {
+  font-size: 0.3rem;
+}
+.left-box .wiper {
+  text-align: center;
+  padding: 20px 0;
+}
+.left-box .wiper .icon-yugua {
+  font-size: 0.4rem;
+  padding: 0 40px ;
+  background: #eee;
+  border-radius: 30px;
+}
+.left-box .wiper div {
+  margin: 5px 0;
+  font-size: 0.15rem;
+}
+.left-box .swiper-container {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 1px 3px 2px silver ;
+}
+.left-box .swiper-pagination {
+  bottom: 0;
+}
+.left-box .width90 {
+  width: 90%;
+}
+.left-box .colorEEE {
+  color: #eee;
+}
+.left-box .line {
+  border-top: 1px solid #eee;
+  padding-bottom: 5px;
+}
+.left-box .slide3 div {
+  margin-top: 22px;
+}
+.left-box .slide3 .iconfont {
+  font-size: 1rem;
+}
+.left-box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.left-box .li3List {
+  width: 96%;
+  height: 20%;
+  background: #000;
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  z-index: 1;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.left-box .li3List .iconfont {
+  font-size: 0.25rem;
+}
+.left-box .li3List .li3ListSmall {
+  margin: 17px 0;
+}
+.right-box {
+  width: 76%;
+  height: 100%;
+  background: #eee;
+  position: relative;
+}
+.right-box .header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 50px;
+  font-size: 0.2rem;
+}
+.right-box .header .iconfont {
+  font-size: 0.25rem;
+}
+.right-box .header .padding010 {
+  padding: 0 10px;
+}
+.right-box .header .header-left {
+  padding: 0 20px;
+}
+.right-box .header .header-left .lock {
+  padding-right: 30px;
+}
+.right-box .header .header-right {
+  padding: 0 20px;
+}
+.right-box .map {
+  width: 100%;
+  height: 100%;
+}
+.right-box .setSetting {
+  width: 96%;
+  height: 94%;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.right-box .close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.1rem;
+}
+.right-box .charge,
+.right-box .radio,
+.right-box .calendar,
+.right-box .expend,
+.right-box .camera,
+.right-box .book {
+  width: 96%;
+  height: 94%;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.right-box .callPhone {
+  width: 96%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.air-chair {
+  width: 96%;
+  height: 70%;
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.keyShow {
+  width: 50%;
+  height: 45%;
+  padding: 20px;
+  position: absolute;
+  top: 22%;
+  left: 23%;
+  border-radius: 8px;
+  background: #eee;
+  overflow: hidden;
+  z-index: 3;
+}
+.keyShow .icon-qiapian {
+  font-size: 0.35rem;
+}
+.keyShow .card img {
+  width: 10%;
+  transform: rotatex(60deg) rotatey(0deg);
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}

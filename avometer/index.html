@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet"/>
+	<!-- app css js -->
+	<link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8"/>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/interact.min.js"></script>
+  
+    <link rel="stylesheet" href="css/index.css">
+	<!-- app css js -->
+
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body id="">
+        <div class="column is-inline-block live-demo__result">
+            <div id="no-drop" class="drag-drop" style=""> #no-drop </div>
+            
+            <div id="yes-drop" class="drag-drop" data-x="88" data-y="7" style="transform: translate(88px, 7px);">Dragged out</div>
+            
+            <div id="outer-dropzone" class="dropzone">
+                #outer-dropzone
+                <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+                </div>    
+        </div>
+    <!-- <img class="electroprobe" src="img/1.png" alt="">
+    <img class="electroprobe2" src="img/2.png" alt="">
+
+    <div class="avometer">
+        <img class="" src="img/5.png" alt="">
+        <img class="btn" src="img/6.png" alt="">
+
+        <div class="textBox">
+            
+        </div>
+    </div>
+
+    <div class="column">
+        <div id="yes-drop" class="drag-drop">
+            <img src="img/3.png" alt="">
+        </div>
+        <div id="outer-dropzone" class="dropzone">
+
+        </div>
+    </div> -->
+    <script>
+        interact('.dropzone').dropzone({
+            // only accept elements matching this CSS selector
+            accept: '#yes-drop',
+            // Require a 75% element overlap for a drop to be possible
+            overlap: 0.75,
+
+            // listen for drop related events:
+
+            ondropactivate: function (event) {
+                // add active dropzone feedback
+               // event.target.classList.add('drop-active')
+            },
+            ondragenter: function (event) {
+                var draggableElement = event.relatedTarget;
+                var dropzoneElement = event.target;
+
+                // feedback the possibility of a drop
+                dropzoneElement.classList.add('drop-target')
+                draggableElement.classList.add('can-drop')
+                draggableElement.textContent = 'Dragged in'
+            },
+            ondragleave: function (event) {
+                // remove the drop feedback style
+                event.target.classList.remove('drop-target')
+                event.relatedTarget.classList.remove('can-drop')
+                event.relatedTarget.textContent = 'Dragged out'
+            },
+            ondrop: function (event) {
+                event.relatedTarget.textContent = 'Dropped'
+            },
+            ondropdeactivate: function (event) {
+                // remove active dropzone feedback
+                event.target.classList.remove('drop-active')
+                event.target.classList.remove('drop-target')
+            }
+        });
+
+        interact('.drag-drop').draggable({
+            inertia: true,
+            modifiers: [
+            interact.modifiers.restrict({
+                restriction: "parent",
+                endOnly: true,
+                elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+            })
+            ],
+            autoScroll: true,
+            // dragMoveListener from the dragging demo above
+            //onmove: dragMoveListener
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link href="../_css/mui.min.css" rel="stylesheet" />
+	<script src="../_js/rem.js"></script>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/air-chair.css" />
+
+	<script src="../_js/TimelineMax.js"></script>
+	<script src="../_js/TweenMax.js"></script>
+	<script src="../_js/mui.min.js"></script>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<title></title>
+</head>
+
+<body>
+	<div class="air-chair">
+		<div class="airTop">
+			<div>保持温度控制</div>
+			<div class="airTopBtn">
+				<ul class="flexRow">
+					<li>关</li>
+					<li>开</li>
+					<li>爱犬</li>
+				</ul>
+				<div class="active"></div>
+			</div>
+			<div>温度控制将在您下车后关闭</div>
+		</div>
+
+		<div class="airBox flexRow">
+			<div class="airBoxLeft">
+				<div class="airBoxLeftBox airBoxLeftBox1 active" data-id="0">
+					<span class="iconfont icon-fengshan"></span>
+				</div>
+				<div class="airBoxLeftBox airBoxLeftBox2" data-id="1">
+					<span class="iconfont icon-shuizhengqi"></span>
+				</div>
+			</div>
+
+			<div class="airBoxRight">
+				<div class="airBoxRightBox1">
+					<div class="airBoxRightBox1-1 flexRow justSpaBetween">
+						<div class="flexRow">
+							<div class="imgBtnBox"><span class="iconfont icon-kaiguan imgBtn"></span></div>
+							<div class="textBtn">自动</div>
+						</div>
+						<div class="flexRow">
+							<div class="imgBtnBox"> <i class="imgBtn">A/C</i></div>
+							
+							<div class="flexRow tempControl justSpaAround">
+								<span class="iconfont icon-jianhao"></span>
+								<div class=""><span class="iconfont icon-fengshan"></span><span class="">1</span></div>
+								<span class="iconfont icon-iconfont7"></span>
+							</div>
+							
+							<div class="xunhuan"><span class="iconfont icon-xunhuan imgBtn"></span></div>
+						</div>
+						<div></div>
+					</div>
+					<div class="airBoxRightBox1-2">
+						<div class="imgBtnBox">
+							<img class="imgBtn" src="img/air-chair/wind1.png" alt="">
+						</div>
+					</div>
+					<div class="airBoxRightBox1-3">
+						<div class="imgBtnBox">
+							<img class="imgBtn" src="img/air-chair/wind2.png" alt="">
+						</div>
+					</div>
+					<div  class="airBoxRightBox1-4 flexRow justSpaBetween">
+						<div class="imgBtnBox">
+							<img class="imgBtn" src="img/air-chair/wind3.png" alt="">
+						</div>
+						<div></div>
+						<div>
+
+						</div>
+					</div>
+				</div>
+				<div class="airBoxRight2 dn">
+					<div>座椅加热</div>
+					<div class="allClose">全部关闭</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function dq(selector) {
+			return document.querySelector(selector);
+		};
+
+		// 切换 空调设置和座椅加热设置
+		mui('.airBoxLeft').on('tap','.airBoxLeftBox',function(){
+			let _this = this
+			//console.log(_this);
+			//console.log(dq('.airBoxLeft').children);
+			
+			for(let i=0;i<dq('.airBoxLeft').children.length;i++){
+				dq('.airBoxLeft').children[i].classList.remove('active')
+				dq('.airBoxRight').children[i].classList.add('dn')
+			}
+			_this.classList.add('active')
+			dq('.airBoxRight').children[_this.getAttribute('data-id')].classList.remove('dn')
+		
+		})
+
+		// 点击保持温度控制开关
+		var tl1 = new TimelineMax({})
+		mui('.airTopBtn').on('tap','li',function(){
+			let _this = this;
+			// 获取当前元素的父级的子级个数
+			let liListLength = _this.parentNode.children.length;
+			let num = (_this.clientWidth * $(_this).index())+'px';
+			tl1.to($( _this.parentNode.parentNode.children[1]), 0.5, {left:num,ease: Power0.easeNone});
+		})
+		
+		
+	</script>
+	
+</body>
+
+</html>

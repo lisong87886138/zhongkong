@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1033854_x2kxnse8kbh.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+</head>
+
+<body id="home-page">
+    <!-- <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> -->
+    <div class="swiperBox">
+        <!-- 搜索 -->
+        <!-- <div class="search">
+            <span class="mui-icon mui-icon-search"></span>
+            <div class="mui-input-row">
+                <input id="suggestId" type="text" class="mui-input-clear search-input" placeholder="带朕去哪儿"> -->
+                <!-- <input  type="text" class=" mui-input-clear" placeholder="带朕去哪儿" > -->
+            <!-- </div>
+            <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:200px;height:auto; display:none;"></div>
+        </div> -->
+        <!-- 方向 -->
+        <div class="direction">
+            <span class="iconfont icon-shanxing"></span>
+        </div>
+        <!-- 信号灯 -->
+        <div class="traffic-light">
+            <span class="iconfont icon-honglvdeng"></span>
+        </div>
+        <!-- 地图按钮 放大所小 -->
+        <!-- <div class="mapZoom">
+            <span data-state="add" class="iconfont icon-hao"></span>
+            <span data-state="sub" class="iconfont icon-sub"></span>
+        </div> -->
+        <div class="mui-content">
+            <!-- 内容 -->
+
+            <!-- <div id="allmap" class="map"> -->
+                <!-- map -->
+            <!-- </div> -->
+            <!-- 高德map -->
+            <div class="map">
+                <object eid="objMap" data="map.html" type="" width="100%" height="100%"></object>
+            </div>
+            <!-- 高德map -->
+        </div>
+        <!-- 内容 end-->
+    </div>
+
+    <!-- 底部 -->
+    <nav id="home-footer" class="mui-bar mui-bar-tab ">
+        
+    </nav>
+    <!-- app -->
+
+    <script src="js/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            jtApp.indexHtml();
+        }
+    </script>
+</body>
+
+</html>

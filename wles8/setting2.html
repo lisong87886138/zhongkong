@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../_js/mui.min.js"></script>
+    <script src="../_js/rem.js"></script>
+    <link href="../_css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1087136_5eyztuup24a.css">
+    <link rel="stylesheet" href="../_css/swiper.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script src="../_js/swiper.min.js"></script>
+    <script src="../_js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        mui.init();
+    </script>
+</head>
+
+<body id="home-page">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+    <div class="warrper">
+        <!-- 中控屏幕 -->
+        <div class="screen">
+            <!-- 头部 -->
+            <div class="screen-top displayFlexRow justifyContentSpaceBetween">
+
+            </div>
+            <!-- 头部 -->
+
+            <div class="setting2-main">
+                <div class="setting2Header">
+                    <div id="segmentedControl" class="mui-segmented-control">
+                        <a class="mui-control-item mui-active" href="#item1">通用</a>
+                        <a class="mui-control-item" href="#item2">显示</a>
+                        <a class="mui-control-item" href="#item3">连接</a>
+                        <a class="mui-control-item" href="#item4">声音</a>
+                        <a class="mui-control-item" href="#item5">NOMI</a>
+                        <a class="mui-control-item" href="#item6">安全</a>
+                    </div>
+                </div>
+                <div>
+                    <div id="item1" class="mui-control-content mui-active">
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>运营商</span>
+                            <span>中国移动</span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>版本</span>
+                            <span>NIO OS 1.2.0.c</span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>还原</span>
+                            <span class="iconfont icon-jiantou1"></span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>系统更新</span>
+                            <span>可升级为NIO OS 1.2.1 <span class="iconfont icon-jiantou1"></span></span>
+                        </div>
+                        <div class="title">帮助</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>用户手册</span>
+                            <span class="iconfont icon-jiantou1"></span>
+                        </div>
+                        <div class="clause textCenter">
+                            <span>《政策和隐私》 </span>
+                            和
+                            <span> 蔚来车联网服务条款</span>
+                        </div>
+                    </div>
+                    <div id="item2" class="mui-control-content">
+                        <div class="title">中控屏</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">自动亮度调节</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput1" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput1')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+
+                        <div class="title">HUD增强平视显示系统</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">开启HUD</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">自动亮度调节</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput2" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput2')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">高度</div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput3" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput3')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">仪表盘</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">自动亮度调节</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput4" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput4')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">NOMI亮度</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">自动亮度调节</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput5" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput5')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                    </div>
+                    <div id="item3" class="mui-control-content">
+                        <div class="title">网络连接</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>蓝牙</span>
+                            <span>未连接 <span class="iconfont icon-jiantou1"></span></span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>热点</span>
+                            <span>未开启 <span class="iconfont icon-jiantou1"></span></span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>WLAN</span>
+                            <span>未连接 <span class="iconfont icon-jiantou1"></span></span>
+                        </div>
+                        <div class="title">充电面板</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>无线充电</span>
+                            <span>已开启 <span class="iconfont icon-jiantou1"></span></span>
+                        </div>
+                    </div>
+                    <div id="item4" class="mui-control-content">
+                        <div class="title">音量调节</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">根据车速自动调节音量</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="title">系统提示音</div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput6" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput6')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">媒体</div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput7" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput7')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">NOMI (包含导航)</div>
+                        <div class="textCenter margin20-0">
+                            <span class="iconfont icon-liangdu"></span>
+                            <input class="fengInput fengInput8" type="range" value="3" min="0" max="10"
+                                oninput="getVal(this.value,'.fengInput8')">
+                            <span class="iconfont icon-liangdu"></span>
+                        </div>
+                        <div class="title">导航</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">导航中可继续播放媒体</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="title">音响体验</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>音场模式</span>
+                            <span class="iconfont icon-jiantou1"></span>
+                        </div>
+                    </div>
+                    <div id="item5" class="mui-control-content">
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">隐私模式</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                        <div class="title">NOMI 小课堂</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>快来上课啦</span>
+                            <span>书</span>
+                        </div>
+                        <div class="title">设置唤醒词</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <div>
+                                <input type="radio" name="selectThis" value="1">
+                                嗨 NOMI
+                            </div>
+                            <span class="iconfont icon-laba"></span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <div>
+                                <input type="radio" name="selectThis" value="2">
+                                自定义唤醒词
+                            </div>
+                            <span>编辑</span>
+                        </div>
+                        <div class="title">版本</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>资源包管理</span>
+                            <span>20190624</span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>NOMI版本</span>
+                            <span>V1.4.79a158</span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>离线对话系统版本</span>
+                            <span>V1.4.79a158</span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>语音服务版本</span>
+                            <span>V1.4.79a158</span>
+                        </div>
+                    </div>
+                    <div id="item6" class="mui-control-content">
+                        <div class="title">密码</div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span>更改车辆密码</span>
+                            <span class="iconfont icon-jiantou1"></span>
+                        </div>
+                        <div class="setting2List displayFlexRow justifyContentSpaceBetween">
+                            <span class="marginAuto0">隐藏密码轨迹</span>
+                            <div class="mui-switch mui-switch-mini mui-active">
+                                <div class="mui-switch-handle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中控底部 -->
+            <div class="screen-footer displayFlexRow justifyContentSpaceAround textCenter ">
+
+            </div>
+        </div>
+        <!-- 中控屏幕 -->
+
+    </div>
+
+    <script src="js/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            jtApp.setting2Html();
+        }
+        function getVal(value, className) {
+            $(className).css('background-size', value * 100.0 / 10 + '% 100%')
+        }
+    </script>
+</body>
+
+</html>

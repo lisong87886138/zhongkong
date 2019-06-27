@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<title></title>
+	
+	<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+	<link rel="stylesheet" href="https://cache.amap.com/lbs/static/main.css"/>
+	<script src="../_js/jquery-1.7.2.min.js"></script>
+
+	<style>
+		body {
+            font-size: 12px;
+        }
+        #tip {
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0px silver;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        #tip input[type="text"] {
+            height: 25px;
+            border: 0;
+            padding-left: 5px;
+            width: 280px;
+            border-radius: 3px;
+            outline: none;
+        }
+		.info{
+			left: 6rem;
+			width: 30rem;
+		}
+		.db{
+			visibility: visible!important;
+			display: block;
+			left: 85px;
+			top: 55.1875px;
+			min-width: 333px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id='container'></div>
+	<div class="info">
+		<div class="input-item">
+			<div class="input-item-prepend">
+			</div>
+			<input id='tipinput' type="text">
+		</div>
+	</div>
+	<div class="input-item">
+        <input type="button" class="btn" value="开始动画" id="start" onclick="startAnimation()"/>
+        <input type="button" class="btn" value="暂停动画" id="pause" onclick="pauseAnimation()"/>
+    </div>
+    <div class="input-item">
+        <input type="button" class="btn" value="继续动画" id="resume" onclick="resumeAnimation()"/>
+        <input type="button" class="btn" value="停止动画" id="stop" onclick="stopAnimation()"/>
+	</div>
+	<div id="panel"></div>
+
+
+	<!-- app -->
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=460722158f2b505f447a1a626950200b&plugin=AMap.Autocomplete,AMap.Driving,AMap.PlaceSearch,,AMap.AdvancedInfoWindow,AMap.Geocoder"></script>
+	<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+	<script src="js/mapCreat.js"></script>
+	<script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script>
+	<script src="js/websocket.js"></script>
+	<script src="js/map.js"></script>
+
+
+	
+</body>
+
+</html>

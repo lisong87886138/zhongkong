@@ -1,0 +1,125 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+/* 初始化 */
+p {
+  font-size: 0.2rem;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mains {
+  width: 100%;
+  background: #fff;
+  height: 100%;
+  margin: 0% auto 0%;
+}
+/* 旋转样式 */
+._rotateFu90 {
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+._rotate90 {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+._rotate180 {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+._rotateY180 {
+  transform: rotateY(180deg);
+  display: inline-block;
+}
+.dn {
+  display: none!important;
+}
+.db {
+  display: block!important;
+}
+.opct1 {
+  opacity: 1;
+}
+.opct0 {
+  opacity: 0!important;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.alignItemsBaseline {
+  align-items: baseline ;
+}
+.justSpaAround {
+  justify-content: space-around;
+}
+.justSpaBetween {
+  justify-content: space-between;
+}
+.justSpaEven {
+  justify-content: space-evenly;
+}
+.mui-action-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.marginAuto0 {
+  margin: auto 0;
+}
+.margin0Auto {
+  margin: 0 auto;
+}
+.margin20Auto {
+  margin: 20px auto;
+}
+.margin20-0 {
+  margin: 20px 0;
+}
+/* 底部设置 */
+.footerSeeting {
+  width: 100%;
+  background: #020202;
+  color: #a6a6a6;
+  font-size: 0.1rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+}
+.footerSeeting .footerSeetingUl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.footerSeeting .footerSeetingUl li {
+  margin: auto;
+  text-align: center;
+}
+.footerSeeting .footerSeetingUl span {
+  font-size: 0.3rem;
+}
+.footerSeeting .icon09,
+.footerSeeting .icon07 {
+  width: 0.5rem;
+}
